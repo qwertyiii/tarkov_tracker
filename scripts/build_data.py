@@ -13,14 +13,14 @@ import sys
 sys.path.insert(0, os.path.dirname(__file__))
 from xlsx_reader import read_workbook  # noqa: E402
 
-XLSX = "tarkov_hideout_requirements_2026-06-14.xlsx"
+XLSX = "tarkov_hideout_requirements_ru_2026-06-14.xlsx"
 OUT = os.path.join("src", "data", "data.json")
 
 ITEM_TYPES = {"Предмет", "Опционально"}  # collectible items; rest are conditions
 
 
 def slugify(name):
-    return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
+    return re.sub(r"[^\w]+", "-", name.lower(), flags=re.UNICODE).strip("-") or "module"
 
 
 def to_int(s):
@@ -63,7 +63,7 @@ def build():
                 "id": mid,
                 "name": module,
                 "maxLevel": 0,
-                "isEvent": module == "Christmas Tree",
+                "isEvent": module in ("Christmas Tree", "Елка"),
                 "_levels": {},   # level -> {items, conditions}
             }
             order.append(mid)

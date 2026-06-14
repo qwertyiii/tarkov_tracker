@@ -5,8 +5,8 @@
   },
   "modules": [
     {
-      "id": "air-filtering-unit",
-      "name": "Air Filtering Unit",
+      "id": "воздушный-фильтратор",
+      "name": "Воздушный Фильтратор",
       "maxLevel": 1,
       "isEvent": false,
       "levels": [
@@ -14,19 +14,19 @@
           "level": 1,
           "items": [
             {
-              "name": "Gas mask air filter",
+              "name": "Воздушный фильтр для противогаза",
               "qty": 5,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Military power filter",
+              "name": "Военный фильтр питания",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Military corrugated tube",
+              "name": "Военная гофрированная трубка",
               "qty": 10,
               "fir": false,
               "optional": false
@@ -35,28 +35,28 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Dollars",
+              "text": "Доллары",
               "qty": 25000
             },
             {
               "type": "Торговец",
-              "text": "Skier LL3"
+              "text": "Лыжник LL3"
             },
             {
               "type": "Модуль",
-              "text": "Generator 3"
+              "text": "Генератор Ур 3"
             },
             {
               "type": "Модуль",
-              "text": "Vents 3"
+              "text": "Вентиляция Ур 3"
             }
           ]
         }
       ]
     },
     {
-      "id": "bitcoin-farm",
-      "name": "Bitcoin Farm",
+      "id": "биткоин-ферма",
+      "name": "Биткоин ферма",
       "maxLevel": 3,
       "isEvent": false,
       "levels": [
@@ -64,31 +64,31 @@
           "level": 1,
           "items": [
             {
-              "name": "T-Shaped plug",
+              "name": "Тройник",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "VPX Flash Storage Module",
+              "name": "Твердотельный накопитель VPX Flash Storage Module",
               "qty": 2,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Power cord",
+              "name": "Силовой кабель",
               "qty": 15,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Power supply unit",
+              "name": "Блок питания",
               "qty": 10,
               "fir": true,
               "optional": false
             },
             {
-              "name": "CPU fan",
+              "name": "Процессорный кулер",
               "qty": 15,
               "fir": false,
               "optional": false
@@ -97,7 +97,7 @@
           "conditions": [
             {
               "type": "Модуль",
-              "text": "Intelligence Center 2"
+              "text": "Разведцентр Ур 2"
             }
           ]
         },
@@ -105,31 +105,31 @@
           "level": 2,
           "items": [
             {
-              "name": "CPU fan",
+              "name": "Процессорный кулер",
               "qty": 15,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Power supply unit",
+              "name": "Блок питания",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Printed circuit board",
+              "name": "Печатная плата",
               "qty": 15,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Phase control relay",
+              "name": "Реле контроля фаз",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Military power filter",
+              "name": "Военный фильтр питания",
               "qty": 5,
               "fir": false,
               "optional": false
@@ -138,7 +138,7 @@
           "conditions": [
             {
               "type": "Модуль",
-              "text": "Generator 3"
+              "text": "Генератор Ур 3"
             }
           ]
         },
@@ -146,31 +146,31 @@
           "level": 3,
           "items": [
             {
-              "name": "CPU fan",
+              "name": "Процессорный кулер",
               "qty": 25,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Silicone tube",
+              "name": "Силиконовая трубка",
               "qty": 15,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Electric motor",
+              "name": "Электродвигатель",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Pressure gauge",
+              "name": "Датчик давления",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "6-STEN-140-M military battery",
+              "name": "Военный аккумулятор 6-СТЭН-140-М",
               "qty": 2,
               "fir": false,
               "optional": false
@@ -179,19 +179,19 @@
           "conditions": [
             {
               "type": "Модуль",
-              "text": "Solar Power 1"
+              "text": "Солнечная Батарея Ур 1"
             },
             {
               "type": "Модуль",
-              "text": "Water Collector 3"
+              "text": "Водосборник Ур 3"
             }
           ]
         }
       ]
     },
     {
-      "id": "booze-generator",
-      "name": "Booze Generator",
+      "id": "самогонный-аппарат",
+      "name": "Самогонный Аппарат",
       "maxLevel": 1,
       "isEvent": false,
       "levels": [
@@ -199,43 +199,43 @@
           "level": 1,
           "items": [
             {
-              "name": "Metal spare parts",
+              "name": "Набор металлических частей",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Pressure gauge",
+              "name": "Датчик давления",
               "qty": 2,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Radiator helix",
+              "name": "Спираль накаливания",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Silicone tube",
+              "name": "Силиконовая трубка",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Pipe grip wrench",
+              "name": "Шарнирный ключ КШС",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Analog thermometer",
+              "name": "Аналоговый термометр",
               "qty": 2,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Corrugated hose",
+              "name": "Гофрированный шланг",
               "qty": 10,
               "fir": false,
               "optional": false
@@ -244,19 +244,19 @@
           "conditions": [
             {
               "type": "Модуль",
-              "text": "Water Collector 3"
+              "text": "Водосборник Ур 3"
             },
             {
               "type": "Модуль",
-              "text": "Nutrition Unit 3"
+              "text": "Пищеблок Ур 3"
             }
           ]
         }
       ]
     },
     {
-      "id": "cultist-circle",
-      "name": "Cultist Circle",
+      "id": "круг-сектантов",
+      "name": "Круг сектантов",
       "maxLevel": 1,
       "isEvent": false,
       "levels": [
@@ -264,37 +264,37 @@
           "level": 1,
           "items": [
             {
-              "name": "PAID AntiRoach spray",
+              "name": "Спрей от насекомых PAID AntiRoach",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Light bulb",
+              "name": "Лампа накаливания",
               "qty": 5,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Can of white salt",
+              "name": "Банка с солью",
               "qty": 3,
               "fir": true,
               "optional": false
             },
             {
-              "name": "SurvL Survivor Lighter",
+              "name": "Зажигалка выживальщика SurvL",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Construction measuring tape",
+              "name": "Строительная измерительная рулетка",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "WI-FI Camera",
+              "name": "WI-FI Камера",
               "qty": 1,
               "fir": false,
               "optional": false
@@ -303,20 +303,20 @@
           "conditions": [
             {
               "type": "Издание/условие",
-              "text": "Owning \"The Unheard\" game edition OR",
+              "text": "Владение изданием игры \"The Unheard\" ИЛИ",
               "note": "Альтернатива: иметь издание The Unheard или собрать предметы ниже"
             },
             {
               "type": "Модуль",
-              "text": "Security 1"
+              "text": "Безопасность Ур 1"
             }
           ]
         }
       ]
     },
     {
-      "id": "defective-wall",
-      "name": "Defective Wall",
+      "id": "аварийная-стена",
+      "name": "Аварийная стена",
       "maxLevel": 6,
       "isEvent": false,
       "levels": [
@@ -326,15 +326,15 @@
           "conditions": [
             {
               "type": "Модуль",
-              "text": "Medstation 1"
+              "text": "Медблок Ур 1"
             },
             {
               "type": "Модуль",
-              "text": "Water Collector 1"
+              "text": "Водосборник Ур 1"
             },
             {
               "type": "Ожидание",
-              "text": "Wait ~30 minutes after construction"
+              "text": "Подождать ~30 минут после постройки"
             }
           ]
         },
@@ -342,7 +342,7 @@
           "level": 2,
           "items": [
             {
-              "name": "Fleece fabric",
+              "name": "Флисовая ткань",
               "qty": 1,
               "fir": false,
               "optional": true
@@ -354,7 +354,7 @@
           "level": 3,
           "items": [
             {
-              "name": "Fleece fabric",
+              "name": "Флисовая ткань",
               "qty": 1,
               "fir": false,
               "optional": true
@@ -366,13 +366,13 @@
           "level": 4,
           "items": [
             {
-              "name": "Fierce Blow sledgehammer",
+              "name": "Кувалда \"Лютый удар\"",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Fleece fabric",
+              "name": "Флисовая ткань",
               "qty": 1,
               "fir": false,
               "optional": true
@@ -384,19 +384,19 @@
           "level": 5,
           "items": [
             {
-              "name": "Metal cutting scissors",
+              "name": "Ножницы для резки металла",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Toolset",
+              "name": "Набор инструментов",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Fleece fabric",
+              "name": "Флисовая ткань",
               "qty": 1,
               "fir": false,
               "optional": true
@@ -408,49 +408,49 @@
           "level": 6,
           "items": [
             {
-              "name": "Corrugated hose",
+              "name": "Гофрированный шланг",
               "qty": 2,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Duct tape",
+              "name": "Монтажный скотч",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Toolset",
+              "name": "Набор инструментов",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Pliers Elite",
+              "name": "Плоскогубцы Elite",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Metal spare parts",
+              "name": "Набор металлических частей",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Xenomorph sealing foam",
+              "name": "Монтажная пена Xenomorph",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Bundle of wires",
+              "name": "Пучок проводов",
               "qty": 2,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Light bulb",
+              "name": "Лампа накаливания",
               "qty": 2,
               "fir": false,
               "optional": false
@@ -461,8 +461,8 @@
       ]
     },
     {
-      "id": "gear-rack",
-      "name": "Gear Rack",
+      "id": "стенд-со-снаряжением",
+      "name": "Стенд со снаряжением",
       "maxLevel": 3,
       "isEvent": false,
       "levels": [
@@ -470,43 +470,43 @@
           "level": 1,
           "items": [
             {
-              "name": "Electric drill",
+              "name": "Электродрель",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Sewing kit",
+              "name": "Набор для шитья",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Awl",
+              "name": "Шило",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Leatherman Multitool",
+              "name": "Мультитул Leatherman",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Bolts",
+              "name": "Болты",
               "qty": 15,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Fleece fabric",
+              "name": "Флисовая ткань",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Energy-saving lamp",
+              "name": "Энергосберегающая лампа",
               "qty": 8,
               "fir": false,
               "optional": false
@@ -515,20 +515,20 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 300000
             },
             {
               "type": "Торговец",
-              "text": "Ragman LL2"
+              "text": "Барахольщик LL2"
             },
             {
               "type": "Модуль",
-              "text": "Defective Wall 6"
+              "text": "Аварийная стена Ур 6"
             },
             {
               "type": "Модуль",
-              "text": "Illumination 2"
+              "text": "Освещение Ур 2"
             }
           ]
         },
@@ -536,43 +536,43 @@
           "level": 2,
           "items": [
             {
-              "name": "Electric drill",
+              "name": "Электродрель",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Duct tape",
+              "name": "Монтажный скотч",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Shustrilo sealing foam",
+              "name": "Монтажная пена Shustrilo",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Pack of nails",
+              "name": "Пачка гвоздей",
               "qty": 8,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Energy-saving lamp",
+              "name": "Энергосберегающая лампа",
               "qty": 12,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Aramid fiber fabric",
+              "name": "Арамидная ткань",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Wrench",
+              "name": "Гаечный ключ",
               "qty": 1,
               "fir": true,
               "optional": false
@@ -581,16 +581,16 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 800000
             },
             {
               "type": "Торговец",
-              "text": "Ragman LL3"
+              "text": "Барахольщик LL3"
             },
             {
               "type": "Модуль",
-              "text": "Hall of Fame 1"
+              "text": "Уголок боевой славы Ур 1"
             }
           ]
         },
@@ -598,43 +598,43 @@
           "level": 3,
           "items": [
             {
-              "name": "Body armor repair kit",
+              "name": "Набор для ремонта бронежилетов",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Cordura polyamide fabric",
+              "name": "Полиамидная ткань Кордура",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Metal spare parts",
+              "name": "Набор металлических частей",
               "qty": 15,
               "fir": false,
               "optional": false
             },
             {
-              "name": "KEKTAPE duct tape",
+              "name": "Липкая лента \"KEKТЕЙП\"",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Energy-saving lamp",
+              "name": "Энергосберегающая лампа",
               "qty": 15,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Set of files \"Master\"",
+              "name": "Набор напильников \"Мастер\"",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Ratchet wrench",
+              "name": "Трещоточный ключ",
               "qty": 1,
               "fir": true,
               "optional": false
@@ -643,24 +643,24 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 1200000
             },
             {
               "type": "Торговец",
-              "text": "Ragman LL4"
+              "text": "Барахольщик LL4"
             },
             {
               "type": "Модуль",
-              "text": "Hall of Fame 2"
+              "text": "Уголок боевой славы Ур 2"
             }
           ]
         }
       ]
     },
     {
-      "id": "generator",
-      "name": "Generator",
+      "id": "генератор",
+      "name": "Генератор",
       "maxLevel": 3,
       "isEvent": false,
       "levels": [
@@ -668,7 +668,7 @@
           "level": 1,
           "items": [
             {
-              "name": "Spark plug",
+              "name": "Свеча зажигания",
               "qty": 1,
               "fir": false,
               "optional": false
@@ -677,12 +677,12 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 100000
             },
             {
               "type": "Модуль",
-              "text": "Security 1"
+              "text": "Безопасность Ур 1"
             }
           ]
         },
@@ -690,25 +690,25 @@
           "level": 2,
           "items": [
             {
-              "name": "Bulbex cable cutter",
+              "name": "Кабелерез Bulbex",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Phase control relay",
+              "name": "Реле контроля фаз",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Electric motor",
+              "name": "Электродвигатель",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Bundle of wires",
+              "name": "Пучок проводов",
               "qty": 15,
               "fir": false,
               "optional": false
@@ -717,11 +717,11 @@
           "conditions": [
             {
               "type": "Модуль",
-              "text": "Security 2"
+              "text": "Безопасность Ур 2"
             },
             {
               "type": "Модуль",
-              "text": "Vents 2"
+              "text": "Вентиляция Ур 2"
             }
           ]
         },
@@ -729,31 +729,31 @@
           "level": 3,
           "items": [
             {
-              "name": "Power supply unit",
+              "name": "Блок питания",
               "qty": 5,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Phase control relay",
+              "name": "Реле контроля фаз",
               "qty": 12,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Electric motor",
+              "name": "Электродвигатель",
               "qty": 3,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Spark plug",
+              "name": "Свеча зажигания",
               "qty": 16,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Metal spare parts",
+              "name": "Набор металлических частей",
               "qty": 10,
               "fir": false,
               "optional": false
@@ -762,23 +762,23 @@
           "conditions": [
             {
               "type": "Торговец",
-              "text": "Mechanic LL3"
+              "text": "Механик LL3"
             },
             {
               "type": "Модуль",
-              "text": "Security 3"
+              "text": "Безопасность Ур 3"
             },
             {
               "type": "Модуль",
-              "text": "Vents 3"
+              "text": "Вентиляция Ур 3"
             }
           ]
         }
       ]
     },
     {
-      "id": "hall-of-fame",
-      "name": "Hall of Fame",
+      "id": "уголок-боевой-славы",
+      "name": "Уголок боевой славы",
       "maxLevel": 3,
       "isEvent": false,
       "levels": [
@@ -786,37 +786,37 @@
           "level": 1,
           "items": [
             {
-              "name": "Insulating tape",
+              "name": "Изолента",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Pack of nails",
+              "name": "Пачка гвоздей",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Light bulb",
+              "name": "Лампа накаливания",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Cat figurine",
+              "name": "Статуэтка кота",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Fleece fabric",
+              "name": "Флисовая ткань",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Round pliers",
+              "name": "Круглогубцы",
               "qty": 1,
               "fir": true,
               "optional": false
@@ -825,7 +825,7 @@
           "conditions": [
             {
               "type": "Торговец",
-              "text": "Mechanic LL2"
+              "text": "Механик LL2"
             }
           ]
         },
@@ -833,55 +833,55 @@
           "level": 2,
           "items": [
             {
-              "name": "Tech manual",
+              "name": "Техническая документация",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Pliers Elite",
+              "name": "Плоскогубцы Elite",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Toolset",
+              "name": "Набор инструментов",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Golden rooster figurine",
+              "name": "Золотой петух",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Energy-saving lamp",
+              "name": "Энергосберегающая лампа",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Pack of screws",
+              "name": "Пакет саморезов",
               "qty": 6,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Duct tape",
+              "name": "Монтажный скотч",
               "qty": 3,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Xenomorph sealing foam",
+              "name": "Монтажная пена Xenomorph",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Tube of Poxeram cold welding",
+              "name": "Тюбик холодной сварки Poxeram",
               "qty": 2,
               "fir": false,
               "optional": false
@@ -893,49 +893,49 @@
           "level": 3,
           "items": [
             {
-              "name": "Set of files \"Master\"",
+              "name": "Набор напильников \"Мастер\"",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Electric drill",
+              "name": "Электродрель",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Bronze lion figurine",
+              "name": "Бронзовый лев",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Energy-saving lamp",
+              "name": "Энергосберегающая лампа",
               "qty": 15,
               "fir": false,
               "optional": false
             },
             {
-              "name": "KEKTAPE duct tape",
+              "name": "Липкая лента \"KEKТЕЙП\"",
               "qty": 3,
               "fir": true,
               "optional": false
             },
             {
-              "name": "T-Shaped plug",
+              "name": "Тройник",
               "qty": 6,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Metal spare parts",
+              "name": "Набор металлических частей",
               "qty": 15,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Power cord",
+              "name": "Силовой кабель",
               "qty": 5,
               "fir": false,
               "optional": false
@@ -946,8 +946,8 @@
       ]
     },
     {
-      "id": "heating",
-      "name": "Heating",
+      "id": "обогрев",
+      "name": "Обогрев",
       "maxLevel": 3,
       "isEvent": false,
       "levels": [
@@ -955,7 +955,7 @@
           "level": 1,
           "items": [
             {
-              "name": "Classic matches",
+              "name": "Обычные спички",
               "qty": 2,
               "fir": false,
               "optional": false
@@ -964,7 +964,7 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 25000
             }
           ]
@@ -973,19 +973,19 @@
           "level": 2,
           "items": [
             {
-              "name": "Dry fuel",
+              "name": "Сухое горючее",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Hunting matches",
+              "name": "Охотничьи спички",
               "qty": 2,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Crickent lighter",
+              "name": "Зажигалка Crickent",
               "qty": 5,
               "fir": false,
               "optional": false
@@ -994,16 +994,16 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 50000
             },
             {
               "type": "Навык",
-              "text": "Endurance Level 1"
+              "text": "Выносливость Ур 1"
             },
             {
               "type": "Модуль",
-              "text": "Vents 1"
+              "text": "Вентиляция Ур 1"
             }
           ]
         },
@@ -1011,25 +1011,25 @@
           "level": 3,
           "items": [
             {
-              "name": "Military corrugated tube",
+              "name": "Военная гофрированная трубка",
               "qty": 2,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Radiator helix",
+              "name": "Спираль накаливания",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Bundle of wires",
+              "name": "Пучок проводов",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Phase control relay",
+              "name": "Реле контроля фаз",
               "qty": 4,
               "fir": true,
               "optional": false
@@ -1038,23 +1038,23 @@
           "conditions": [
             {
               "type": "Торговец",
-              "text": "Ragman LL2"
+              "text": "Барахольщик LL2"
             },
             {
               "type": "Модуль",
-              "text": "Generator 2"
+              "text": "Генератор Ур 2"
             },
             {
               "type": "Модуль",
-              "text": "Workbench 2"
+              "text": "Верстак Ур 2"
             }
           ]
         }
       ]
     },
     {
-      "id": "gym",
-      "name": "Gym",
+      "id": "тренажерный-зал",
+      "name": "Тренажерный зал",
       "maxLevel": 1,
       "isEvent": false,
       "levels": [
@@ -1062,43 +1062,43 @@
           "level": 1,
           "items": [
             {
-              "name": "Insulating tape",
+              "name": "Изолента",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Metal cutting scissors",
+              "name": "Ножницы для резки металла",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "WD-40 (100ml)",
+              "name": "WD-40 (100мл)",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Toolset",
+              "name": "Набор инструментов",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Screw nuts",
+              "name": "Гайки",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Electric drill",
+              "name": "Электродрель",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Bolts",
+              "name": "Болты",
               "qty": 5,
               "fir": false,
               "optional": false
@@ -1107,23 +1107,23 @@
           "conditions": [
             {
               "type": "Модуль",
-              "text": "Defective Wall 6"
+              "text": "Аварийная стена Ур 6"
             },
             {
               "type": "Модуль",
-              "text": "Illumination 2"
+              "text": "Освещение Ур 2"
             },
             {
               "type": "Модуль",
-              "text": "Vents 2"
+              "text": "Вентиляция Ур 2"
             }
           ]
         }
       ]
     },
     {
-      "id": "illumination",
-      "name": "Illumination",
+      "id": "освещение",
+      "name": "Освещение",
       "maxLevel": 3,
       "isEvent": false,
       "levels": [
@@ -1131,7 +1131,7 @@
           "level": 1,
           "items": [
             {
-              "name": "Crickent lighter",
+              "name": "Зажигалка Crickent",
               "qty": 1,
               "fir": false,
               "optional": false
@@ -1140,7 +1140,7 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 10000
             }
           ]
@@ -1149,13 +1149,13 @@
           "level": 2,
           "items": [
             {
-              "name": "Light bulb",
+              "name": "Лампа накаливания",
               "qty": 14,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Bundle of wires",
+              "name": "Пучок проводов",
               "qty": 10,
               "fir": false,
               "optional": false
@@ -1164,7 +1164,7 @@
           "conditions": [
             {
               "type": "Модуль",
-              "text": "Generator 1"
+              "text": "Генератор Ур 1"
             }
           ]
         },
@@ -1172,19 +1172,19 @@
           "level": 3,
           "items": [
             {
-              "name": "Energy-saving lamp",
+              "name": "Энергосберегающая лампа",
               "qty": 12,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Capacitors",
+              "name": "Конденсаторы",
               "qty": 7,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Bundle of wires",
+              "name": "Пучок проводов",
               "qty": 12,
               "fir": false,
               "optional": false
@@ -1193,28 +1193,28 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 50000
             },
             {
               "type": "Торговец",
-              "text": "Mechanic LL2"
+              "text": "Механик LL2"
             },
             {
               "type": "Модуль",
-              "text": "Generator 2"
+              "text": "Генератор Ур 2"
             },
             {
               "type": "Модуль",
-              "text": "Workbench 1"
+              "text": "Верстак Ур 1"
             }
           ]
         }
       ]
     },
     {
-      "id": "intelligence-center",
-      "name": "Intelligence Center",
+      "id": "разведцентр",
+      "name": "Разведцентр",
       "maxLevel": 3,
       "isEvent": false,
       "levels": [
@@ -1222,31 +1222,31 @@
           "level": 1,
           "items": [
             {
-              "name": "Power cord",
+              "name": "Силовой кабель",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Intelligence folder",
+              "name": "Папка с разведданными",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Topographic survey maps",
+              "name": "Материалы топографической разведки",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Factory plan map",
+              "name": "План-карта Завода",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Working LCD",
+              "name": "Рабочий LCD дисплей",
               "qty": 1,
               "fir": false,
               "optional": false
@@ -1255,19 +1255,19 @@
           "conditions": [
             {
               "type": "Модуль",
-              "text": "Security 2"
+              "text": "Безопасность Ур 2"
             },
             {
               "type": "Модуль",
-              "text": "Vents 1"
+              "text": "Вентиляция Ур 1"
             },
             {
               "type": "Модуль",
-              "text": "Generator 1"
+              "text": "Генератор Ур 1"
             },
             {
               "type": "Модуль",
-              "text": "Workbench 1"
+              "text": "Верстак Ур 1"
             }
           ]
         },
@@ -1275,25 +1275,25 @@
           "level": 2,
           "items": [
             {
-              "name": "Intelligence folder",
+              "name": "Папка с разведданными",
               "qty": 3,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Secure Flash drive",
+              "name": "Защищенный флеш-накопитель",
               "qty": 3,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Power cord",
+              "name": "Силовой кабель",
               "qty": 7,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Damaged hard drive",
+              "name": "Поврежденный жесткий диск",
               "qty": 8,
               "fir": false,
               "optional": false
@@ -1302,23 +1302,23 @@
           "conditions": [
             {
               "type": "Торговец",
-              "text": "Mechanic LL2"
+              "text": "Механик LL2"
             },
             {
               "type": "Навык",
-              "text": "Attention Level 3"
+              "text": "Внимательность Ур 3"
             },
             {
               "type": "Модуль",
-              "text": "Security 3"
+              "text": "Безопасность Ур 3"
             },
             {
               "type": "Модуль",
-              "text": "Medstation 3"
+              "text": "Медблок Ур 3"
             },
             {
               "type": "Модуль",
-              "text": "Nutrition Unit 3"
+              "text": "Пищеблок Ур 3"
             }
           ]
         },
@@ -1326,37 +1326,37 @@
           "level": 3,
           "items": [
             {
-              "name": "Military cable",
+              "name": "Военный кабель",
               "qty": 8,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Military COFDM Wireless Signal Transmitter",
+              "name": "Военный COFDM беспроводной передатчик сигналов",
               "qty": 2,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Far-forward GPS Signal Amplifier Unit",
+              "name": "Передовой блок усилителя GPS сигнала",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "VPX Flash Storage Module",
+              "name": "Твердотельный накопитель VPX Flash Storage Module",
               "qty": 2,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Military flash drive",
+              "name": "Военный флеш-накопитель",
               "qty": 8,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Secure magnetic tape cassette",
+              "name": "Защищенная кассета с магнитной пленкой",
               "qty": 2,
               "fir": false,
               "optional": false
@@ -1365,23 +1365,23 @@
           "conditions": [
             {
               "type": "Торговец",
-              "text": "Prapor LL3"
+              "text": "Прапор LL3"
             },
             {
               "type": "Модуль",
-              "text": "Workbench 3"
+              "text": "Верстак Ур 3"
             },
             {
               "type": "Модуль",
-              "text": "Generator 3"
+              "text": "Генератор Ур 3"
             }
           ]
         }
       ]
     },
     {
-      "id": "lavatory",
-      "name": "Lavatory",
+      "id": "санузел",
+      "name": "Санузел",
       "maxLevel": 3,
       "isEvent": false,
       "levels": [
@@ -1389,25 +1389,25 @@
           "level": 1,
           "items": [
             {
-              "name": "Toilet paper",
+              "name": "Рулон туалетной бумаги",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Toothpaste",
+              "name": "Зубная паста",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Soap",
+              "name": "Кусок мыла",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Awl",
+              "name": "Шило",
               "qty": 1,
               "fir": false,
               "optional": false
@@ -1416,7 +1416,7 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 2000
             }
           ]
@@ -1425,31 +1425,31 @@
           "level": 2,
           "items": [
             {
-              "name": "KEKTAPE duct tape",
+              "name": "Липкая лента \"KEKТЕЙП\"",
               "qty": 3,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Corrugated hose",
+              "name": "Гофрированный шланг",
               "qty": 6,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Pack of screws",
+              "name": "Пакет саморезов",
               "qty": 6,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Electric drill",
+              "name": "Электродрель",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Sewing kit",
+              "name": "Набор для шитья",
               "qty": 2,
               "fir": true,
               "optional": false
@@ -1458,11 +1458,11 @@
           "conditions": [
             {
               "type": "Модуль",
-              "text": "Water Collector 1"
+              "text": "Водосборник Ур 1"
             },
             {
               "type": "Модуль",
-              "text": "Vents 1"
+              "text": "Вентиляция Ур 1"
             }
           ]
         },
@@ -1470,25 +1470,25 @@
           "level": 3,
           "items": [
             {
-              "name": "Xenomorph sealing foam",
+              "name": "Монтажная пена Xenomorph",
               "qty": 6,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Corrugated hose",
+              "name": "Гофрированный шланг",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Pressure gauge",
+              "name": "Датчик давления",
               "qty": 2,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Toolset",
+              "name": "Набор инструментов",
               "qty": 1,
               "fir": true,
               "optional": false
@@ -1497,19 +1497,19 @@
           "conditions": [
             {
               "type": "Модуль",
-              "text": "Vents 2"
+              "text": "Вентиляция Ур 2"
             },
             {
               "type": "Модуль",
-              "text": "Water Collector 2"
+              "text": "Водосборник Ур 2"
             }
           ]
         }
       ]
     },
     {
-      "id": "library",
-      "name": "Library",
+      "id": "библиотека",
+      "name": "Библиотека",
       "maxLevel": 1,
       "isEvent": false,
       "levels": [
@@ -1517,37 +1517,37 @@
           "level": 1,
           "items": [
             {
-              "name": "BakeEzy cook book",
+              "name": "Книга рецептов BakeEzy",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Slim diary",
+              "name": "Тонкий ежедневник",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Diary",
+              "name": "Ежедневник",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Tech manual",
+              "name": "Техническая документация",
               "qty": 8,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Chainlet",
+              "name": "Ювелирная цепочка",
               "qty": 2,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Horse figurine",
+              "name": "Статуэтка коня",
               "qty": 1,
               "fir": true,
               "optional": false
@@ -1556,24 +1556,24 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 400000
             },
             {
               "type": "Навык",
-              "text": "Hideout Management Level 5"
+              "text": "Управление убежищем Ур 5"
             },
             {
               "type": "Модуль",
-              "text": "Rest Space 3"
+              "text": "Зона Отдыха Ур 3"
             }
           ]
         }
       ]
     },
     {
-      "id": "medstation",
-      "name": "Medstation",
+      "id": "медблок",
+      "name": "Медблок",
       "maxLevel": 3,
       "isEvent": false,
       "levels": [
@@ -1581,25 +1581,25 @@
           "level": 1,
           "items": [
             {
-              "name": "Disposable syringe",
+              "name": "Шприц в упаковке",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Pile of meds",
+              "name": "Набор медикаментов",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Aseptic bandage",
+              "name": "Бинт стерильный",
               "qty": 2,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Bottle of OLOLO Multivitamins",
+              "name": "Банка с витаминами OLOLO",
               "qty": 1,
               "fir": false,
               "optional": false
@@ -1608,7 +1608,7 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 50000
             }
           ]
@@ -1617,25 +1617,25 @@
           "level": 2,
           "items": [
             {
-              "name": "Bottle of saline solution",
+              "name": "Бутылка физраствора",
               "qty": 6,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Medical tools",
+              "name": "Медицинские инструменты",
               "qty": 3,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Medical bloodset",
+              "name": "Набор для переливания крови",
               "qty": 2,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Esmarch tourniquet",
+              "name": "Жгут Эсмарха",
               "qty": 10,
               "fir": false,
               "optional": false
@@ -1644,20 +1644,20 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 150000
             },
             {
               "type": "Торговец",
-              "text": "Therapist LL2"
+              "text": "Терапевт LL2"
             },
             {
               "type": "Навык",
-              "text": "Health Level 2"
+              "text": "Здоровье Ур 2"
             },
             {
               "type": "Модуль",
-              "text": "Generator 1"
+              "text": "Генератор Ур 1"
             }
           ]
         },
@@ -1665,19 +1665,19 @@
           "level": 3,
           "items": [
             {
-              "name": "Ophthalmoscope",
+              "name": "Офтальмоскоп",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Bottle of saline solution",
+              "name": "Бутылка физраствора",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "LEDX Skin Transilluminator",
+              "name": "Светодиодный трансиллюминатор кожи LEDX",
               "qty": 1,
               "fir": false,
               "optional": false
@@ -1686,36 +1686,36 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 500000
             },
             {
               "type": "Торговец",
-              "text": "Therapist LL3"
+              "text": "Терапевт LL3"
             },
             {
               "type": "Торговец",
-              "text": "Skier LL2"
+              "text": "Лыжник LL2"
             },
             {
               "type": "Навык",
-              "text": "Vitality Level 3"
+              "text": "Живучесть Ур 3"
             },
             {
               "type": "Модуль",
-              "text": "Generator 2"
+              "text": "Генератор Ур 2"
             },
             {
               "type": "Модуль",
-              "text": "Lavatory 2"
+              "text": "Санузел Ур 2"
             }
           ]
         }
       ]
     },
     {
-      "id": "nutrition-unit",
-      "name": "Nutrition Unit",
+      "id": "пищеблок",
+      "name": "Пищеблок",
       "maxLevel": 3,
       "isEvent": false,
       "levels": [
@@ -1723,19 +1723,19 @@
           "level": 1,
           "items": [
             {
-              "name": "Can of white salt",
+              "name": "Банка с солью",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Power cord",
+              "name": "Силовой кабель",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Phase control relay",
+              "name": "Реле контроля фаз",
               "qty": 2,
               "fir": false,
               "optional": false
@@ -1744,12 +1744,12 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 25000
             },
             {
               "type": "Модуль",
-              "text": "Generator 1"
+              "text": "Генератор Ур 1"
             }
           ]
         },
@@ -1757,25 +1757,25 @@
           "level": 2,
           "items": [
             {
-              "name": "Alkaline cleaner for heat exchangers",
+              "name": "Щелочное средство для промывки теплообменных поверхностей",
               "qty": 2,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Wrench",
+              "name": "Гаечный ключ",
               "qty": 4,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Corrugated hose",
+              "name": "Гофрированный шланг",
               "qty": 4,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Phase control relay",
+              "name": "Реле контроля фаз",
               "qty": 3,
               "fir": false,
               "optional": false
@@ -1784,7 +1784,7 @@
           "conditions": [
             {
               "type": "Модуль",
-              "text": "Lavatory 2"
+              "text": "Санузел Ур 2"
             }
           ]
         },
@@ -1792,19 +1792,19 @@
           "level": 3,
           "items": [
             {
-              "name": "Can of Majaica coffee beans",
+              "name": "Банка кофе Majaica",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Pack of sodium bicarbonate",
+              "name": "Пачка соды",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Smoked Chimney drain cleaner",
+              "name": "Средство для прочистки труб \"Копченый Дымоход\"",
               "qty": 2,
               "fir": true,
               "optional": false
@@ -1813,32 +1813,32 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 125000
             },
             {
               "type": "Навык",
-              "text": "Metabolism Level 3"
+              "text": "Метаболизм Ур 3"
             },
             {
               "type": "Модуль",
-              "text": "Generator 2"
+              "text": "Генератор Ур 2"
             },
             {
               "type": "Модуль",
-              "text": "Lavatory 3"
+              "text": "Санузел Ур 3"
             },
             {
               "type": "Модуль",
-              "text": "Stash 2"
+              "text": "Склад Ур 2"
             }
           ]
         }
       ]
     },
     {
-      "id": "rest-space",
-      "name": "Rest Space",
+      "id": "зона-отдыха",
+      "name": "Зона Отдыха",
       "maxLevel": 3,
       "isEvent": false,
       "levels": [
@@ -1846,13 +1846,13 @@
           "level": 1,
           "items": [
             {
-              "name": "Classic matches",
+              "name": "Обычные спички",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Duct tape",
+              "name": "Монтажный скотч",
               "qty": 1,
               "fir": false,
               "optional": false
@@ -1861,12 +1861,12 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 10000
             },
             {
               "type": "Модуль",
-              "text": "Vents 1"
+              "text": "Вентиляция Ур 1"
             }
           ]
         },
@@ -1874,19 +1874,19 @@
           "level": 2,
           "items": [
             {
-              "name": "Magnet",
+              "name": "Магнит",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "DVD drive",
+              "name": "DVD привод",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Energy-saving lamp",
+              "name": "Энергосберегающая лампа",
               "qty": 5,
               "fir": false,
               "optional": false
@@ -1895,12 +1895,12 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 75000
             },
             {
               "type": "Модуль",
-              "text": "Generator 1"
+              "text": "Генератор Ур 1"
             }
           ]
         },
@@ -1908,25 +1908,25 @@
           "level": 3,
           "items": [
             {
-              "name": "GreenBat lithium battery",
+              "name": "Литиевая аккумуляторная батарейка GreenBat",
               "qty": 4,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Bundle of wires",
+              "name": "Пучок проводов",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Capacitors",
+              "name": "Конденсаторы",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Power cord",
+              "name": "Силовой кабель",
               "qty": 5,
               "fir": false,
               "optional": false
@@ -1935,15 +1935,15 @@
           "conditions": [
             {
               "type": "Торговец",
-              "text": "Skier LL3"
+              "text": "Лыжник LL3"
             }
           ]
         }
       ]
     },
     {
-      "id": "scav-case",
-      "name": "Scav Case",
+      "id": "ящик-диких",
+      "name": "Ящик Диких",
       "maxLevel": 1,
       "isEvent": false,
       "levels": [
@@ -1951,43 +1951,43 @@
           "level": 1,
           "items": [
             {
-              "name": "Golden rooster figurine",
+              "name": "Золотой петух",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Lucky Scav Junk box",
+              "name": "Кейс для хлама",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Bottle of Fierce Hatchling moonshine",
+              "name": "Бутылка самогона \"Лютый Топорист\"",
               "qty": 3,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Roler Submariner gold wrist watch",
+              "name": "Золотые часы Roler Submariner",
               "qty": 4,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Golden neck chain",
+              "name": "Золотая цепочка",
               "qty": 8,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Gold skull ring",
+              "name": "Золотое кольцо с черепом",
               "qty": 6,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Bronze lion figurine",
+              "name": "Бронзовый лев",
               "qty": 3,
               "fir": true,
               "optional": false
@@ -1996,15 +1996,15 @@
           "conditions": [
             {
               "type": "Модуль",
-              "text": "Intelligence Center 2"
+              "text": "Разведцентр Ур 2"
             }
           ]
         }
       ]
     },
     {
-      "id": "security",
-      "name": "Security",
+      "id": "безопасность",
+      "name": "Безопасность",
       "maxLevel": 3,
       "isEvent": false,
       "levels": [
@@ -2012,7 +2012,7 @@
           "level": 1,
           "items": [
             {
-              "name": "Construction measuring tape",
+              "name": "Строительная измерительная рулетка",
               "qty": 1,
               "fir": false,
               "optional": false
@@ -2021,7 +2021,7 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 20000
             }
           ]
@@ -2030,19 +2030,19 @@
           "level": 2,
           "items": [
             {
-              "name": "WD-40 (100ml)",
+              "name": "WD-40 (100мл)",
               "qty": 2,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Pliers Elite",
+              "name": "Плоскогубцы Elite",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "TP-200 TNT brick",
+              "name": "Тротиловая шашка ТП-200",
               "qty": 2,
               "fir": false,
               "optional": false
@@ -2051,16 +2051,16 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 45000
             },
             {
               "type": "Навык",
-              "text": "Endurance Level 2"
+              "text": "Выносливость Ур 2"
             },
             {
               "type": "Модуль",
-              "text": "Illumination 1"
+              "text": "Освещение Ур 1"
             }
           ]
         },
@@ -2068,25 +2068,25 @@
           "level": 3,
           "items": [
             {
-              "name": "NIXXOR lens",
+              "name": "Объектив NIXXOR",
               "qty": 8,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Working LCD",
+              "name": "Рабочий LCD дисплей",
               "qty": 2,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Bundle of wires",
+              "name": "Пучок проводов",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "SSD drive",
+              "name": "SSD диск",
               "qty": 1,
               "fir": true,
               "optional": false
@@ -2095,19 +2095,19 @@
           "conditions": [
             {
               "type": "Торговец",
-              "text": "Mechanic LL2"
+              "text": "Механик LL2"
             },
             {
               "type": "Модуль",
-              "text": "Illumination 3"
+              "text": "Освещение Ур 3"
             }
           ]
         }
       ]
     },
     {
-      "id": "shooting-range",
-      "name": "Shooting Range",
+      "id": "тир",
+      "name": "Тир",
       "maxLevel": 3,
       "isEvent": false,
       "levels": [
@@ -2115,19 +2115,19 @@
           "level": 1,
           "items": [
             {
-              "name": "Metal spare parts",
+              "name": "Набор металлических частей",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Bolts",
+              "name": "Болты",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Screw nuts",
+              "name": "Гайки",
               "qty": 1,
               "fir": false,
               "optional": false
@@ -2136,12 +2136,12 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 20000
             },
             {
               "type": "Модуль",
-              "text": "Illumination 1"
+              "text": "Освещение Ур 1"
             }
           ]
         },
@@ -2149,61 +2149,61 @@
           "level": 2,
           "items": [
             {
-              "name": "Electric motor",
+              "name": "Электродвигатель",
               "qty": 3,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Construction measuring tape",
+              "name": "Строительная измерительная рулетка",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Tube of Poxeram cold welding",
-              "qty": 3,
-              "fir": false,
-              "optional": false
-            },
-            {
-              "name": "Toolset",
-              "qty": 1,
-              "fir": true,
-              "optional": false
-            },
-            {
-              "name": "Pack of screws",
+              "name": "Тюбик холодной сварки Poxeram",
               "qty": 3,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Electric drill",
+              "name": "Набор инструментов",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Metal spare parts",
+              "name": "Пакет саморезов",
+              "qty": 3,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Электродрель",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Набор металлических частей",
               "qty": 8,
               "fir": false,
               "optional": false
             },
             {
-              "name": "WI-FI Camera",
+              "name": "WI-FI Камера",
               "qty": 3,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Bundle of wires",
+              "name": "Пучок проводов",
               "qty": 6,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Energy-saving lamp",
+              "name": "Энергосберегающая лампа",
               "qty": 6,
               "fir": false,
               "optional": false
@@ -2212,11 +2212,11 @@
           "conditions": [
             {
               "type": "Модуль",
-              "text": "Illumination 3"
+              "text": "Освещение Ур 3"
             },
             {
               "type": "Модуль",
-              "text": "Workbench 2"
+              "text": "Верстак Ур 2"
             }
           ]
         },
@@ -2224,55 +2224,55 @@
           "level": 3,
           "items": [
             {
-              "name": "Set of files \"Master\"",
+              "name": "Набор напильников \"Мастер\"",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Printed circuit board",
+              "name": "Печатная плата",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Bundle of wires",
+              "name": "Пучок проводов",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Metal spare parts",
+              "name": "Набор металлических частей",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Capacitors",
+              "name": "Конденсаторы",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Phase control relay",
+              "name": "Реле контроля фаз",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Power cord",
+              "name": "Силовой кабель",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Leatherman Multitool",
+              "name": "Мультитул Leatherman",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Tech manual",
+              "name": "Техническая документация",
               "qty": 1,
               "fir": true,
               "optional": false
@@ -2283,8 +2283,8 @@
       ]
     },
     {
-      "id": "solar-power",
-      "name": "Solar Power",
+      "id": "солнечная-батарея",
+      "name": "Солнечная Батарея",
       "maxLevel": 1,
       "isEvent": false,
       "levels": [
@@ -2292,31 +2292,31 @@
           "level": 1,
           "items": [
             {
-              "name": "Phased array element",
+              "name": "Элемент фазированной решетки РЛС",
               "qty": 6,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Advanced current converter",
+              "name": "Передовой преобразователь тока",
               "qty": 1,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Working LCD",
+              "name": "Рабочий LCD дисплей",
               "qty": 3,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Military cable",
+              "name": "Военный кабель",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Military power filter",
+              "name": "Военный фильтр питания",
               "qty": 10,
               "fir": false,
               "optional": false
@@ -2325,28 +2325,28 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Euros",
+              "text": "Евро",
               "qty": 25000
             },
             {
               "type": "Торговец",
-              "text": "Peacekeeper LL4"
+              "text": "Миротворец LL4"
             },
             {
               "type": "Модуль",
-              "text": "Generator 3"
+              "text": "Генератор Ур 3"
             },
             {
               "type": "Модуль",
-              "text": "Workbench 3"
+              "text": "Верстак Ур 3"
             }
           ]
         }
       ]
     },
     {
-      "id": "stash",
-      "name": "Stash",
+      "id": "склад",
+      "name": "Склад",
       "maxLevel": 4,
       "isEvent": false,
       "levels": [
@@ -2356,7 +2356,7 @@
           "conditions": [
             {
               "type": "Издание/условие",
-              "text": "Owning standard game edition"
+              "text": "Владение стандартным изданием игры"
             }
           ]
         },
@@ -2364,25 +2364,25 @@
           "level": 2,
           "items": [
             {
-              "name": "WD-40 (100ml)",
+              "name": "WD-40 (100мл)",
               "qty": 4,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Hand drill",
+              "name": "Ручная дрель",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Pack of nails",
+              "name": "Пачка гвоздей",
               "qty": 5,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Pack of screws",
+              "name": "Пакет саморезов",
               "qty": 10,
               "fir": false,
               "optional": false
@@ -2391,17 +2391,17 @@
           "conditions": [
             {
               "type": "Издание/условие",
-              "text": "Owning \"Left Behind\" game edition OR",
+              "text": "Владение изданием игры \"Left Behind\" ИЛИ",
               "note": "Альтернатива: иметь издание Left Behind или собрать предметы/валюту ниже"
             },
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 2500000
             },
             {
               "type": "Модуль",
-              "text": "Vents 1"
+              "text": "Вентиляция Ур 1"
             }
           ]
         },
@@ -2409,19 +2409,19 @@
           "level": 3,
           "items": [
             {
-              "name": "Electric drill",
+              "name": "Электродрель",
               "qty": 2,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Pack of screws",
+              "name": "Пакет саморезов",
               "qty": 15,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Pack of nails",
+              "name": "Пачка гвоздей",
               "qty": 7,
               "fir": true,
               "optional": false
@@ -2430,29 +2430,29 @@
           "conditions": [
             {
               "type": "Издание/условие",
-              "text": "Owning \"Prepare for Escape\" game edition OR",
+              "text": "Владение изданием игры \"Prepare for Escape\" ИЛИ",
               "note": "Альтернатива: иметь издание Prepare for Escape или собрать предметы/валюту ниже"
             },
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 8500000
             },
             {
               "type": "Торговец",
-              "text": "Prapor LL3"
+              "text": "Прапор LL3"
             },
             {
               "type": "Торговец",
-              "text": "Ragman LL3"
+              "text": "Барахольщик LL3"
             },
             {
               "type": "Модуль",
-              "text": "Vents 2"
+              "text": "Вентиляция Ур 2"
             },
             {
               "type": "Модуль",
-              "text": "Heating 2"
+              "text": "Обогрев Ур 2"
             }
           ]
         },
@@ -2460,25 +2460,25 @@
           "level": 4,
           "items": [
             {
-              "name": "Screw nuts",
+              "name": "Гайки",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Bolts",
+              "name": "Болты",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Shustrilo sealing foam",
+              "name": "Монтажная пена Shustrilo",
               "qty": 8,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Ratchet wrench",
+              "name": "Трещоточный ключ",
               "qty": 2,
               "fir": true,
               "optional": false
@@ -2487,45 +2487,45 @@
           "conditions": [
             {
               "type": "Издание/условие",
-              "text": "Owning \"Edge of Darkness\" or \"The Unheard\" game edition OR",
+              "text": "Владение изданием игры \"Edge of Darkness\" или \"The Unheard\" ИЛИ",
               "note": "Альтернатива: иметь EoD/The Unheard или собрать предметы/валюту ниже"
             },
             {
               "type": "Валюта",
-              "text": "Euros",
+              "text": "Евро",
               "qty": 200000
             },
             {
               "type": "Торговец",
-              "text": "Peacekeeper LL4"
+              "text": "Миротворец LL4"
             },
             {
               "type": "Торговец",
-              "text": "Ragman LL4"
+              "text": "Барахольщик LL4"
             },
             {
               "type": "Модуль",
-              "text": "Generator 3"
+              "text": "Генератор Ур 3"
             },
             {
               "type": "Модуль",
-              "text": "Workbench 3"
+              "text": "Верстак Ур 3"
             },
             {
               "type": "Модуль",
-              "text": "Heating 3"
+              "text": "Обогрев Ур 3"
             },
             {
               "type": "Модуль",
-              "text": "Intelligence Center 2"
+              "text": "Разведцентр Ур 2"
             }
           ]
         }
       ]
     },
     {
-      "id": "vents",
-      "name": "Vents",
+      "id": "вентиляция",
+      "name": "Вентиляция",
       "maxLevel": 3,
       "isEvent": false,
       "levels": [
@@ -2535,7 +2535,7 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 25000
             }
           ]
@@ -2544,25 +2544,25 @@
           "level": 2,
           "items": [
             {
-              "name": "Metal spare parts",
+              "name": "Набор металлических частей",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "CPU fan",
+              "name": "Процессорный кулер",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Car battery",
+              "name": "Автомобильный аккумулятор",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Electric motor",
+              "name": "Электродвигатель",
               "qty": 1,
               "fir": true,
               "optional": false
@@ -2574,31 +2574,31 @@
           "level": 3,
           "items": [
             {
-              "name": "Printed circuit board",
+              "name": "Печатная плата",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Electric motor",
+              "name": "Электродвигатель",
               "qty": 4,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Metal spare parts",
+              "name": "Набор металлических частей",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Bundle of wires",
+              "name": "Пучок проводов",
               "qty": 14,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Car battery",
+              "name": "Автомобильный аккумулятор",
               "qty": 4,
               "fir": true,
               "optional": false
@@ -2607,19 +2607,19 @@
           "conditions": [
             {
               "type": "Навык",
-              "text": "Strength Level 2"
+              "text": "Сила Ур 2"
             },
             {
               "type": "Модуль",
-              "text": "Generator 2"
+              "text": "Генератор Ур 2"
             }
           ]
         }
       ]
     },
     {
-      "id": "water-collector",
-      "name": "Water Collector",
+      "id": "водосборник",
+      "name": "Водосборник",
       "maxLevel": 3,
       "isEvent": false,
       "levels": [
@@ -2627,25 +2627,25 @@
           "level": 1,
           "items": [
             {
-              "name": "Duct tape",
+              "name": "Монтажный скотч",
               "qty": 3,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Screw nuts",
+              "name": "Гайки",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Bolts",
+              "name": "Болты",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Corrugated hose",
+              "name": "Гофрированный шланг",
               "qty": 4,
               "fir": false,
               "optional": false
@@ -2654,7 +2654,7 @@
           "conditions": [
             {
               "type": "Модуль",
-              "text": "Security 1"
+              "text": "Безопасность Ур 1"
             }
           ]
         },
@@ -2662,25 +2662,25 @@
           "level": 2,
           "items": [
             {
-              "name": "Toolset",
+              "name": "Набор инструментов",
               "qty": 2,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Corrugated hose",
+              "name": "Гофрированный шланг",
               "qty": 6,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Electric motor",
+              "name": "Электродвигатель",
               "qty": 2,
               "fir": true,
               "optional": false
             },
             {
-              "name": "KEKTAPE duct tape",
+              "name": "Липкая лента \"KEKТЕЙП\"",
               "qty": 5,
               "fir": false,
               "optional": false
@@ -2689,15 +2689,15 @@
           "conditions": [
             {
               "type": "Торговец",
-              "text": "Jaeger LL2"
+              "text": "Егерь LL2"
             },
             {
               "type": "Навык",
-              "text": "Attention Level 3"
+              "text": "Внимательность Ур 3"
             },
             {
               "type": "Модуль",
-              "text": "Workbench 2"
+              "text": "Верстак Ур 2"
             }
           ]
         },
@@ -2705,19 +2705,19 @@
           "level": 3,
           "items": [
             {
-              "name": "Ratchet wrench",
+              "name": "Трещоточный ключ",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Pliers Elite",
+              "name": "Плоскогубцы Elite",
               "qty": 2,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Shustrilo sealing foam",
+              "name": "Монтажная пена Shustrilo",
               "qty": 10,
               "fir": false,
               "optional": false
@@ -2726,28 +2726,28 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 20000
             },
             {
               "type": "Торговец",
-              "text": "Jaeger LL3"
+              "text": "Егерь LL3"
             },
             {
               "type": "Модуль",
-              "text": "Generator 3"
+              "text": "Генератор Ур 3"
             },
             {
               "type": "Модуль",
-              "text": "Heating 3"
+              "text": "Обогрев Ур 3"
             }
           ]
         }
       ]
     },
     {
-      "id": "weapon-rack",
-      "name": "Weapon Rack",
+      "id": "оружейный-стенд",
+      "name": "Оружейный стенд",
       "maxLevel": 3,
       "isEvent": false,
       "levels": [
@@ -2755,43 +2755,43 @@
           "level": 1,
           "items": [
             {
-              "name": "Pack of nails",
+              "name": "Пачка гвоздей",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Energy-saving lamp",
+              "name": "Энергосберегающая лампа",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Insulating tape",
+              "name": "Изолента",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Hand drill",
+              "name": "Ручная дрель",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Bolts",
+              "name": "Болты",
               "qty": 15,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Metal cutting scissors",
+              "name": "Ножницы для резки металла",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Xenomorph sealing foam",
+              "name": "Монтажная пена Xenomorph",
               "qty": 5,
               "fir": false,
               "optional": false
@@ -2800,15 +2800,15 @@
           "conditions": [
             {
               "type": "Торговец",
-              "text": "Mechanic LL2"
+              "text": "Механик LL2"
             },
             {
               "type": "Модуль",
-              "text": "Illumination 3"
+              "text": "Освещение Ур 3"
             },
             {
               "type": "Модуль",
-              "text": "Stash 2"
+              "text": "Склад Ур 2"
             }
           ]
         },
@@ -2816,55 +2816,55 @@
           "level": 2,
           "items": [
             {
-              "name": "Metal spare parts",
+              "name": "Набор металлических частей",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Pack of screws",
+              "name": "Пакет саморезов",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Electric drill",
+              "name": "Электродрель",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Bundle of wires",
+              "name": "Пучок проводов",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Set of files \"Master\"",
+              "name": "Набор напильников \"Мастер\"",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Tube of Poxeram cold welding",
+              "name": "Тюбик холодной сварки Poxeram",
               "qty": 3,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Energy-saving lamp",
+              "name": "Энергосберегающая лампа",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Duct tape",
+              "name": "Монтажный скотч",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Weapon parts",
+              "name": "Оружейные части",
               "qty": 5,
               "fir": false,
               "optional": false
@@ -2873,19 +2873,19 @@
           "conditions": [
             {
               "type": "Торговец",
-              "text": "Mechanic LL3"
+              "text": "Механик LL3"
             },
             {
               "type": "Модуль",
-              "text": "Shooting Range 2"
+              "text": "Тир Ур 2"
             },
             {
               "type": "Модуль",
-              "text": "Workbench 2"
+              "text": "Верстак Ур 2"
             },
             {
               "type": "Модуль",
-              "text": "Stash 3"
+              "text": "Склад Ур 3"
             }
           ]
         },
@@ -2893,49 +2893,49 @@
           "level": 3,
           "items": [
             {
-              "name": "Electric drill",
+              "name": "Электродрель",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Energy-saving lamp",
+              "name": "Энергосберегающая лампа",
               "qty": 15,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Metal spare parts",
+              "name": "Набор металлических частей",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "KEKTAPE duct tape",
+              "name": "Липкая лента \"KEKТЕЙП\"",
               "qty": 5,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Bundle of wires",
+              "name": "Пучок проводов",
               "qty": 15,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Shustrilo sealing foam",
+              "name": "Монтажная пена Shustrilo",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Tech manual",
+              "name": "Техническая документация",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "#FireKlean gun lube",
+              "name": "Оружейная смазка FireKlean",
               "qty": 1,
               "fir": true,
               "optional": false
@@ -2944,23 +2944,23 @@
           "conditions": [
             {
               "type": "Торговец",
-              "text": "Mechanic LL4"
+              "text": "Механик LL4"
             },
             {
               "type": "Модуль",
-              "text": "Shooting Range 3"
+              "text": "Тир Ур 3"
             },
             {
               "type": "Модуль",
-              "text": "Workbench 3"
+              "text": "Верстак Ур 3"
             }
           ]
         }
       ]
     },
     {
-      "id": "workbench",
-      "name": "Workbench",
+      "id": "верстак",
+      "name": "Верстак",
       "maxLevel": 3,
       "isEvent": false,
       "levels": [
@@ -2968,19 +2968,19 @@
           "level": 1,
           "items": [
             {
-              "name": "Screw nuts",
+              "name": "Гайки",
               "qty": 2,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Bolts",
+              "name": "Болты",
               "qty": 2,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Leatherman Multitool",
+              "name": "Мультитул Leatherman",
               "qty": 1,
               "fir": false,
               "optional": false
@@ -2992,31 +2992,31 @@
           "level": 2,
           "items": [
             {
-              "name": "Bolts",
+              "name": "Болты",
               "qty": 10,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Toolset",
+              "name": "Набор инструментов",
               "qty": 3,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Set of files \"Master\"",
+              "name": "Набор напильников \"Мастер\"",
               "qty": 1,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Electric drill",
+              "name": "Электродрель",
               "qty": 2,
               "fir": true,
               "optional": false
             },
             {
-              "name": "Weapon parts",
+              "name": "Оружейные части",
               "qty": 3,
               "fir": false,
               "optional": false
@@ -3025,11 +3025,11 @@
           "conditions": [
             {
               "type": "Торговец",
-              "text": "Mechanic LL2"
+              "text": "Механик LL2"
             },
             {
               "type": "Модуль",
-              "text": "Illumination 2"
+              "text": "Освещение Ур 2"
             }
           ]
         },
@@ -3037,19 +3037,19 @@
           "level": 3,
           "items": [
             {
-              "name": "Can of thermite",
+              "name": "Банка с термитной смесью",
               "qty": 5,
               "fir": false,
               "optional": false
             },
             {
-              "name": "Pliers Elite",
+              "name": "Плоскогубцы Elite",
               "qty": 2,
               "fir": true,
               "optional": false
             },
             {
-              "name": "#FireKlean gun lube",
+              "name": "Оружейная смазка FireKlean",
               "qty": 1,
               "fir": true,
               "optional": false
@@ -3058,28 +3058,28 @@
           "conditions": [
             {
               "type": "Валюта",
-              "text": "Roubles",
+              "text": "Рубли",
               "qty": 395000
             },
             {
               "type": "Торговец",
-              "text": "Mechanic LL3"
+              "text": "Механик LL3"
             },
             {
               "type": "Модуль",
-              "text": "Generator 2"
+              "text": "Генератор Ур 2"
             },
             {
               "type": "Модуль",
-              "text": "Stash 2"
+              "text": "Склад Ур 2"
             }
           ]
         }
       ]
     },
     {
-      "id": "christmas-tree",
-      "name": "Christmas Tree",
+      "id": "елка",
+      "name": "Елка",
       "maxLevel": 1,
       "isEvent": true,
       "levels": [
@@ -3087,21 +3087,21 @@
           "level": 1,
           "items": [
             {
-              "name": "Christmas tree ornament (Red)",
+              "name": "Елочная игрушка в виде шара (Красная)",
               "qty": 1,
               "fir": true,
               "optional": false,
               "note": "Ивентовый/ограниченный модуль"
             },
             {
-              "name": "Christmas tree ornament (Silver)",
+              "name": "Елочная игрушка в виде шара (Серебристая)",
               "qty": 1,
               "fir": true,
               "optional": false,
               "note": "Ивентовый/ограниченный модуль"
             },
             {
-              "name": "Christmas tree ornament (Violet)",
+              "name": "Елочная игрушка в виде шара (Фиолетовая)",
               "qty": 1,
               "fir": true,
               "optional": false,
@@ -3111,7 +3111,7 @@
           "conditions": [
             {
               "type": "Модуль",
-              "text": "Generator 1",
+              "text": "Генератор Ур 1",
               "note": "Ивентовый/ограниченный модуль"
             }
           ]
