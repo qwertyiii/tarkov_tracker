@@ -1,8 +1,9 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 
-// Versioned localStorage key. Bumping the version must not break old progress:
-// unknown keys are simply ignored, missing keys default sensibly (ТЗ 7).
-const STORAGE_KEY = 'tarkov-hideout-v1'
+// Версионированный ключ localStorage. v2: collected теперь не { key: true },
+// а счётчик { key: число }. Старый булев прогресс несовместим — новый ключ
+// версии просто даёт чистый старт, отдельной миграции не делаем (ТЗ 7).
+const STORAGE_KEY = 'tarkov-hideout-v2'
 
 const EMPTY_STATE = { builtLevels: {}, collected: {} }
 
@@ -48,11 +49,13 @@ export function useStore() {
     }))
   }, [])
 
-  const toggleCollected = useCallback((key, value) => {
+  // Устанавливает счётчик найденного для предмета. n нормализуется к целому
+  // >= 0; ноль удаляет ключ из карты, чтобы экспорт оставался компактным.
+  const setCount = useCallback((key, n) => {
     setState((s) => {
+      const value = Math.max(0, Math.round(Number(n) || 0))
       const next = { ...s.collected }
-      const wanted = value === undefined ? !next[key] : value
-      if (wanted) next[key] = true
+      if (value > 0) next[key] = value
       else delete next[key]
       return { ...s, collected: next }
     })
@@ -84,7 +87,7 @@ export function useStore() {
     builtLevels: state.builtLevels,
     collected: state.collected,
     setBuiltLevel,
-    toggleCollected,
+    setCount,
     reset,
     importState,
     exportString,

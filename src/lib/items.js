@@ -13,12 +13,13 @@ export function pendingLevels(module, builtLevel) {
   return module.levels.filter((l) => l.level > builtLevel)
 }
 
-// A level is ready to build when every MANDATORY item (optional !== true) is
-// collected. Optional items never block (ТЗ 4.3 / 9.2).
+// Уровень готов к постройке, когда по КАЖДОМУ обязательному предмету
+// (optional !== true) найдено не меньше, чем нужно: count >= qty.
+// Опциональные предметы постройку не блокируют (ТЗ 4.3 / 9.2).
 export function isLevelReady(level, collected) {
   return level.items
     .filter((it) => !it.optional)
-    .every((it) => !!collected[itemKey(it.name, it.fir)])
+    .every((it) => (collected[itemKey(it.name, it.fir)] || 0) >= it.qty)
 }
 
 // Flat list of pending items for one module given its built level.
@@ -68,13 +69,25 @@ export function buildSummary(modules, builtLevels, includeEvent) {
   return Array.from(groups.values())
 }
 
-// Sort helper: not-collected first, collected last; stable-ish alphabetical
-// within each group. Used by both windows for the "archive to bottom" behavior.
-export function sortByCollected(rows, collected, keyFn = (r) => r.key) {
+// Сколько каждого предмета нужно по ВСЕМУ убежищу с учётом построенных уровней.
+// Это и максимум счётчика, и порог «собрано полностью». Возвращает Map
+// itemKey -> totalQty, посчитанный через buildSummary.
+export function needByKey(modules, builtLevels, includeEvent) {
+  const map = new Map()
+  for (const g of buildSummary(modules, builtLevels, includeEvent)) {
+    map.set(g.key, g.totalQty)
+  }
+  return map
+}
+
+// Сортировка-архивация: «не готово» вверх, «готово» вниз, внутри групп по
+// алфавиту. Признак готовности задаётся предикатом isDone(row), чтобы можно
+// было считать готовность и по счётчику (found >= qty), и по любому условию.
+export function sortByCollected(rows, isDone) {
   return [...rows].sort((a, b) => {
-    const ca = collected[keyFn(a)] ? 1 : 0
-    const cb = collected[keyFn(b)] ? 1 : 0
-    if (ca !== cb) return ca - cb
+    const da = isDone(a) ? 1 : 0
+    const db = isDone(b) ? 1 : 0
+    if (da !== db) return da - db
     return a.name.localeCompare(b.name)
   })
 }

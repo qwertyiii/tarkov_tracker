@@ -54,15 +54,19 @@ assert.notEqual(firKey, stdKey)
 assert.ok(summary.some((g) => g.key === firKey), 'FIR row present')
 assert.ok(summary.some((g) => g.key === stdKey), 'STD row present')
 
-// 4) readiness ignores optional items. Take a level that has an optional item.
+// 4) readiness ignores optional items and respects per-item counts.
 let testedOptional = false
 for (const m of data.modules)
   for (const l of m.levels) {
     if (l.items.some((it) => it.optional) && l.items.some((it) => !it.optional)) {
       const collected = {}
-      // collect only mandatory ones
-      for (const it of l.items) if (!it.optional) collected[itemKey(it.name, it.fir)] = true
+      // collect mandatory ones to exactly their qty (count model)
+      for (const it of l.items) if (!it.optional) collected[itemKey(it.name, it.fir)] = it.qty
       assert.equal(isLevelReady(l, collected), true, 'ready without optional collected')
+      // one short on a mandatory item -> not ready
+      const firstMand = l.items.find((it) => !it.optional)
+      collected[itemKey(firstMand.name, firstMand.fir)] = firstMand.qty - 1
+      assert.equal(isLevelReady(l, collected), false, 'not ready when count below qty')
       testedOptional = true
     }
   }

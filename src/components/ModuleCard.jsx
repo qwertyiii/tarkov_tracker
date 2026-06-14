@@ -17,20 +17,22 @@ import ItemRow from './ItemRow'
 import Conditions from './Conditions'
 import { isLevelReady, itemKey, pendingLevels, sortByCollected } from '../lib/items'
 
-// Renders the pending items of one level (sorted: pending first, collected last).
-function LevelItems({ items, collected, onToggle }) {
-  const sorted = useMemo(
-    () =>
-      sortByCollected(
-        items.map((it) => ({ ...it, key: itemKey(it.name, it.fir) })),
-        collected
-      ),
-    [items, collected]
-  )
+// Список предметов одного уровня (или объединённый). Сортировка: «не готово для
+// этого уровня» вверх, «готово» (found >= qty этой строки) вниз. need берётся
+// общий по убежищу из needMap, found — общий счётчик collected[key].
+function LevelItems({ items, collected, needMap, onSetCount, itemQuery }) {
+  const sorted = useMemo(() => {
+    const q = (itemQuery || '').trim().toLowerCase()
+    let rows = items.map((it) => ({ ...it, key: itemKey(it.name, it.fir) }))
+    if (q) rows = rows.filter((r) => r.name.toLowerCase().includes(q))
+    // «готово для уровня» = найдено не меньше, чем нужно в этой строке
+    return sortByCollected(rows, (r) => (collected[r.key] || 0) >= r.qty)
+  }, [items, collected, itemQuery])
+
   if (sorted.length === 0) {
     return (
       <Typography variant="body2" color="text.secondary" sx={{ py: 1, pl: 1, fontStyle: 'italic' }}>
-        Предметов нет — только условия.
+        {itemQuery ? 'Нет подходящих предметов.' : 'Предметов нет — только условия.'}
       </Typography>
     )
   }
@@ -40,11 +42,12 @@ function LevelItems({ items, collected, onToggle }) {
         <ItemRow
           key={it.key + '@' + it.level}
           name={it.name}
-          qty={it.qty}
           fir={it.fir}
           optional={it.optional}
-          collected={!!collected[it.key]}
-          onToggle={(v) => onToggle(it.key, v)}
+          lineQty={it.qty}
+          need={needMap.get(it.key) ?? it.qty}
+          found={collected[it.key] || 0}
+          onSetCount={(n) => onSetCount(it.key, n)}
         />
       ))}
     </Box>
@@ -56,31 +59,40 @@ export default function ModuleCard({
   builtLevel,
   groupByLevel,
   collected,
+  needMap,
   onSetLevel,
-  onToggle,
+  onSetCount,
+  expanded,
+  onExpandedChange,
+  itemQuery,
+  dim,
 }) {
   const pending = pendingLevels(module, builtLevel)
   const atMax = builtLevel >= module.maxLevel
 
-  // Target level = next one to build. Its readiness drives the build button.
+  // Целевой уровень = следующий к постройке. Его готовность включает кнопку.
   const targetLevel = module.levels.find((l) => l.level === builtLevel + 1)
   const ready = targetLevel ? isLevelReady(targetLevel, collected) : false
 
-  // remaining mandatory items count across all pending levels — header hint
+  // Сколько обязательных предметов ещё не добрано (found < qty) — для шапки.
   const remaining = useMemo(() => {
     let n = 0
     for (const l of pending)
       for (const it of l.items)
-        if (!it.optional && !collected[itemKey(it.name, it.fir)]) n++
+        if (!it.optional && (collected[itemKey(it.name, it.fir)] || 0) < it.qty) n++
     return n
   }, [pending, collected])
 
-  // "Всё сразу" — merge items of all pending levels into one list.
+  // «Всё сразу» — объединяем предметы и условия всех непостроенных уровней.
   const mergedItems = useMemo(() => pending.flatMap((l) => l.items), [pending])
   const mergedConditions = useMemo(() => pending.flatMap((l) => l.conditions), [pending])
 
   return (
-    <Accordion defaultExpanded={false}>
+    <Accordion
+      expanded={!!expanded}
+      onChange={(_, isExp) => onExpandedChange(module.id, isExp)}
+      sx={{ opacity: dim ? 0.55 : 1 }}
+    >
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, flexWrap: 'wrap', flex: 1, pr: 1 }}>
           <Typography sx={{ fontWeight: 600, flexShrink: 0 }}>{module.name}</Typography>
@@ -107,7 +119,7 @@ export default function ModuleCard({
         </Box>
       </AccordionSummary>
       <AccordionDetails>
-        {/* Built-level selector (ТЗ 5.1) */}
+        {/* Выбор построенного уровня (ТЗ 5.1) */}
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2, flexWrap: 'wrap' }}>
           <FormControl size="small" sx={{ minWidth: 160 }}>
             <InputLabel>Построенный уровень</InputLabel>
@@ -124,7 +136,7 @@ export default function ModuleCard({
             </Select>
           </FormControl>
 
-          {/* Build-next button (ТЗ 5.4): shown only when not at max */}
+          {/* Кнопка постройки следующего уровня (ТЗ 5.4) */}
           {!atMax && (
             <Button
               variant="contained"
@@ -147,7 +159,7 @@ export default function ModuleCard({
             Всё построено — собирать нечего.
           </Typography>
         ) : groupByLevel ? (
-          // "По уровням"
+          // «По уровням»
           pending.map((level) => (
             <Box key={level.level} sx={{ mb: 2 }}>
               <Typography
@@ -162,15 +174,27 @@ export default function ModuleCard({
               >
                 Уровень {level.level}
               </Typography>
-              <LevelItems items={level.items} collected={collected} onToggle={onToggle} />
-              <Conditions conditions={level.conditions} />
+              <LevelItems
+                items={level.items}
+                collected={collected}
+                needMap={needMap}
+                onSetCount={onSetCount}
+                itemQuery={itemQuery}
+              />
+              {!itemQuery && <Conditions conditions={level.conditions} />}
             </Box>
           ))
         ) : (
-          // "Всё сразу"
+          // «Всё сразу»
           <Box>
-            <LevelItems items={mergedItems} collected={collected} onToggle={onToggle} />
-            <Conditions conditions={mergedConditions} />
+            <LevelItems
+              items={mergedItems}
+              collected={collected}
+              needMap={needMap}
+              onSetCount={onSetCount}
+              itemQuery={itemQuery}
+            />
+            {!itemQuery && <Conditions conditions={mergedConditions} />}
           </Box>
         )}
       </AccordionDetails>

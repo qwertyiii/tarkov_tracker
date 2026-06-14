@@ -8,29 +8,66 @@ import SearchIcon from '@mui/icons-material/Search'
 import Typography from '@mui/material/Typography'
 
 import ModuleCard from './ModuleCard'
+import { itemKey, needByKey, pendingLevels } from '../lib/items'
 
-// Window 1 — list of all modules. Toggles: "по уровням / всё сразу" and
-// "показывать ивентовые модули". A search box helps with 27 modules.
+// Окно 1 — список всех модулей. Переключатели: «по уровням / всё сразу»,
+// «ивентовые модули», «2 колонки». Поиск ищет и по названию модуля, и по
+// предметам его непостроенных уровней.
 export default function ModulesView({
   modules,
   builtLevels,
   collected,
   setBuiltLevel,
-  toggleCollected,
+  setCount,
   showEvent,
   onShowEventChange,
 }) {
   const [groupByLevel, setGroupByLevel] = useState(true)
+  const [cols2, setCols2] = useState(false)
   const [query, setQuery] = useState('')
+  // Раскрытые карточки (по id) при ручном управлении (без поиска).
+  const [expandedSet, setExpandedSet] = useState(() => new Set())
 
+  const q = query.trim().toLowerCase()
+
+  // Нужное количество по всему убежищу для каждого предмета — считаем один раз.
+  const needMap = useMemo(
+    () => needByKey(modules, builtLevels, showEvent),
+    [modules, builtLevels, showEvent]
+  )
+
+  // Для каждого модуля: видим ли он, совпал ли по имени, совпал ли по предмету.
   const visible = useMemo(() => {
-    const q = query.trim().toLowerCase()
-    return modules.filter((m) => {
-      if (m.isEvent && !showEvent) return false
-      if (q && !m.name.toLowerCase().includes(q)) return false
-      return true
+    const list = []
+    for (const m of modules) {
+      if (m.isEvent && !showEvent) continue
+      if (!q) {
+        list.push({ module: m, nameMatch: false })
+        continue
+      }
+      const nameMatch = m.name.toLowerCase().includes(q)
+      const itemMatch = pendingLevels(m, builtLevels[m.id] || 0).some((l) =>
+        l.items.some((it) => it.name.toLowerCase().includes(q))
+      )
+      if (nameMatch || itemMatch) list.push({ module: m, nameMatch })
+    }
+    // Архив модулей: полностью построенные — вниз и тусклее.
+    return list.sort((a, b) => {
+      const da = (builtLevels[a.module.id] || 0) >= a.module.maxLevel ? 1 : 0
+      const db = (builtLevels[b.module.id] || 0) >= b.module.maxLevel ? 1 : 0
+      if (da !== db) return da - db
+      return 0
     })
-  }, [modules, showEvent, query])
+  }, [modules, showEvent, q, builtLevels])
+
+  const toggleExpanded = (id, isExp) => {
+    setExpandedSet((prev) => {
+      const next = new Set(prev)
+      if (isExp) next.add(id)
+      else next.delete(id)
+      return next
+    })
+  }
 
   return (
     <Box>
@@ -58,10 +95,14 @@ export default function ModulesView({
           }
           label="Ивентовые модули"
         />
+        <FormControlLabel
+          control={<Switch checked={cols2} onChange={(e) => setCols2(e.target.checked)} />}
+          label="2 колонки"
+        />
         <Box sx={{ flex: 1 }} />
         <TextField
           size="small"
-          placeholder="Поиск модуля…"
+          placeholder="Поиск модуля или предмета…"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           InputProps={{
@@ -71,7 +112,7 @@ export default function ModulesView({
               </InputAdornment>
             ),
           }}
-          sx={{ minWidth: 220 }}
+          sx={{ minWidth: 260 }}
         />
       </Box>
 
@@ -80,17 +121,38 @@ export default function ModulesView({
           Ничего не найдено.
         </Typography>
       ) : (
-        visible.map((m) => (
-          <ModuleCard
-            key={m.id}
-            module={m}
-            builtLevel={builtLevels[m.id] || 0}
-            groupByLevel={groupByLevel}
-            collected={collected}
-            onSetLevel={setBuiltLevel}
-            onToggle={toggleCollected}
-          />
-        ))
+        <Box
+          sx={{
+            display: 'grid',
+            gridTemplateColumns: cols2 ? { xs: '1fr', md: '1fr 1fr' } : '1fr',
+            alignItems: 'start',
+            gap: 2,
+          }}
+        >
+          {visible.map(({ module: m, nameMatch }) => {
+            const built = builtLevels[m.id] || 0
+            const builtFully = built >= m.maxLevel
+            return (
+              <ModuleCard
+                key={m.id}
+                module={m}
+                builtLevel={built}
+                groupByLevel={groupByLevel}
+                collected={collected}
+                needMap={needMap}
+                onSetLevel={setBuiltLevel}
+                onSetCount={setCount}
+                // При поиске совпавшие модули авто-раскрываем; иначе ручное состояние.
+                expanded={q ? true : expandedSet.has(m.id)}
+                onExpandedChange={toggleExpanded}
+                // Если модуль попал в список только по предмету — показываем
+                // внутри лишь подходящие предметы; при совпадении по имени — все.
+                itemQuery={q && !nameMatch ? q : ''}
+                dim={builtFully}
+              />
+            )
+          })}
+        </Box>
       )}
     </Box>
   )

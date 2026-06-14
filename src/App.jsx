@@ -113,14 +113,14 @@ export default function App() {
         </Tabs>
       </AppBar>
 
-      <Container maxWidth="md" sx={{ mt: 3 }}>
+      <Container maxWidth="lg" sx={{ mt: 3 }}>
         {tab === 0 ? (
           <ModulesView
             modules={data.modules}
             builtLevels={store.builtLevels}
             collected={store.collected}
             setBuiltLevel={store.setBuiltLevel}
-            toggleCollected={store.toggleCollected}
+            setCount={store.setCount}
             showEvent={showEvent}
             onShowEventChange={setShowEvent}
           />
@@ -129,7 +129,7 @@ export default function App() {
             modules={data.modules}
             builtLevels={store.builtLevels}
             collected={store.collected}
-            toggleCollected={store.toggleCollected}
+            setCount={store.setCount}
             showEvent={showEvent}
           />
         )}
