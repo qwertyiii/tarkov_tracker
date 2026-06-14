@@ -25,7 +25,7 @@ export function OptionalBadge() {
   )
 }
 
-// Small monospace quantity pill, e.g. ×5
+// Заметный янтарный пилюль с количеством, напр. ×5. Цифры моноширинные.
 export function QtyBadge({ qty }) {
   return (
     <Chip
@@ -33,10 +33,12 @@ export function QtyBadge({ qty }) {
       size="small"
       variant="outlined"
       sx={{
-        height: 20,
-        fontSize: 12,
+        height: 26,
+        fontSize: 15,
+        fontWeight: 700,
+        color: 'primary.main',
+        borderColor: 'primary.main',
         fontFamily: '"JetBrains Mono", monospace',
-        borderColor: 'divider',
       }}
     />
   )

@@ -60,14 +60,6 @@ export default function ItemRow({
         '&:hover': { backgroundColor: 'rgba(199,162,107,0.06)' },
       }}
     >
-      {/* Галочка = «собрано полностью»: ставит found=need, снимает — 0 */}
-      <Checkbox
-        checked={done}
-        onChange={(e) => onSetCount(e.target.checked ? need : 0)}
-        size="small"
-        sx={{ p: 0.5 }}
-      />
-
       <Box sx={{ minWidth: 0, flex: 1 }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.75, flexWrap: 'wrap' }}>
           <Typography
@@ -144,6 +136,14 @@ export default function ItemRow({
           <AddIcon fontSize="inherit" />
         </IconButton>
       </Box>
+
+      {/* Галочка = «собрано полностью» (справа): ставит found=need, снимает — 0 */}
+      <Checkbox
+        checked={done}
+        onChange={(e) => onSetCount(e.target.checked ? need : 0)}
+        size="small"
+        sx={{ p: 0.5, ml: 0.5 }}
+      />
     </Box>
   )
 }

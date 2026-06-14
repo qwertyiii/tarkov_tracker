@@ -54,6 +54,9 @@ const theme = createTheme({
           backgroundColor: '#0e0e0e',
           backgroundImage:
             'linear-gradient(180deg, #14130f 0%, #0e0e0e 240px)',
+          // Сглаживание, чтобы тонкий светлый текст не «рябил» на тёмном фоне
+          WebkitFontSmoothing: 'antialiased',
+          MozOsxFontSmoothing: 'grayscale',
         },
         '::-webkit-scrollbar': { width: 10, height: 10 },
         '::-webkit-scrollbar-thumb': {
