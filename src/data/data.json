@@ -1,0 +1,3122 @@
+{
+  "meta": {
+    "date": "2026-06-14",
+    "source": "https://escapefromtarkov.fandom.com/wiki/Hideout"
+  },
+  "modules": [
+    {
+      "id": "air-filtering-unit",
+      "name": "Air Filtering Unit",
+      "maxLevel": 1,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "Gas mask air filter",
+              "qty": 5,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Military power filter",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Military corrugated tube",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Dollars",
+              "qty": 25000
+            },
+            {
+              "type": "Торговец",
+              "text": "Skier LL3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Generator 3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Vents 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bitcoin-farm",
+      "name": "Bitcoin Farm",
+      "maxLevel": 3,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "T-Shaped plug",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "VPX Flash Storage Module",
+              "qty": 2,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Power cord",
+              "qty": 15,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Power supply unit",
+              "qty": 10,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "CPU fan",
+              "qty": 15,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Модуль",
+              "text": "Intelligence Center 2"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "items": [
+            {
+              "name": "CPU fan",
+              "qty": 15,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Power supply unit",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Printed circuit board",
+              "qty": 15,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Phase control relay",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Military power filter",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Модуль",
+              "text": "Generator 3"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "items": [
+            {
+              "name": "CPU fan",
+              "qty": 25,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Silicone tube",
+              "qty": 15,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Electric motor",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Pressure gauge",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "6-STEN-140-M military battery",
+              "qty": 2,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Модуль",
+              "text": "Solar Power 1"
+            },
+            {
+              "type": "Модуль",
+              "text": "Water Collector 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "booze-generator",
+      "name": "Booze Generator",
+      "maxLevel": 1,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "Metal spare parts",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Pressure gauge",
+              "qty": 2,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Radiator helix",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Silicone tube",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Pipe grip wrench",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Analog thermometer",
+              "qty": 2,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Corrugated hose",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Модуль",
+              "text": "Water Collector 3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Nutrition Unit 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cultist-circle",
+      "name": "Cultist Circle",
+      "maxLevel": 1,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "PAID AntiRoach spray",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Light bulb",
+              "qty": 5,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Can of white salt",
+              "qty": 3,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "SurvL Survivor Lighter",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Construction measuring tape",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "WI-FI Camera",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Издание/условие",
+              "text": "Owning \"The Unheard\" game edition OR",
+              "note": "Альтернатива: иметь издание The Unheard или собрать предметы ниже"
+            },
+            {
+              "type": "Модуль",
+              "text": "Security 1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "defective-wall",
+      "name": "Defective Wall",
+      "maxLevel": 6,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [],
+          "conditions": [
+            {
+              "type": "Модуль",
+              "text": "Medstation 1"
+            },
+            {
+              "type": "Модуль",
+              "text": "Water Collector 1"
+            },
+            {
+              "type": "Ожидание",
+              "text": "Wait ~30 minutes after construction"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "items": [
+            {
+              "name": "Fleece fabric",
+              "qty": 1,
+              "fir": false,
+              "optional": true
+            }
+          ],
+          "conditions": []
+        },
+        {
+          "level": 3,
+          "items": [
+            {
+              "name": "Fleece fabric",
+              "qty": 1,
+              "fir": false,
+              "optional": true
+            }
+          ],
+          "conditions": []
+        },
+        {
+          "level": 4,
+          "items": [
+            {
+              "name": "Fierce Blow sledgehammer",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Fleece fabric",
+              "qty": 1,
+              "fir": false,
+              "optional": true
+            }
+          ],
+          "conditions": []
+        },
+        {
+          "level": 5,
+          "items": [
+            {
+              "name": "Metal cutting scissors",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Toolset",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Fleece fabric",
+              "qty": 1,
+              "fir": false,
+              "optional": true
+            }
+          ],
+          "conditions": []
+        },
+        {
+          "level": 6,
+          "items": [
+            {
+              "name": "Corrugated hose",
+              "qty": 2,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Duct tape",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Toolset",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Pliers Elite",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Metal spare parts",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Xenomorph sealing foam",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Bundle of wires",
+              "qty": 2,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Light bulb",
+              "qty": 2,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": "gear-rack",
+      "name": "Gear Rack",
+      "maxLevel": 3,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "Electric drill",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Sewing kit",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Awl",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Leatherman Multitool",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Bolts",
+              "qty": 15,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Fleece fabric",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Energy-saving lamp",
+              "qty": 8,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 300000
+            },
+            {
+              "type": "Торговец",
+              "text": "Ragman LL2"
+            },
+            {
+              "type": "Модуль",
+              "text": "Defective Wall 6"
+            },
+            {
+              "type": "Модуль",
+              "text": "Illumination 2"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "items": [
+            {
+              "name": "Electric drill",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Duct tape",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Shustrilo sealing foam",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Pack of nails",
+              "qty": 8,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Energy-saving lamp",
+              "qty": 12,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Aramid fiber fabric",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Wrench",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 800000
+            },
+            {
+              "type": "Торговец",
+              "text": "Ragman LL3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Hall of Fame 1"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "items": [
+            {
+              "name": "Body armor repair kit",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Cordura polyamide fabric",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Metal spare parts",
+              "qty": 15,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "KEKTAPE duct tape",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Energy-saving lamp",
+              "qty": 15,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Set of files \"Master\"",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Ratchet wrench",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 1200000
+            },
+            {
+              "type": "Торговец",
+              "text": "Ragman LL4"
+            },
+            {
+              "type": "Модуль",
+              "text": "Hall of Fame 2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "generator",
+      "name": "Generator",
+      "maxLevel": 3,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "Spark plug",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 100000
+            },
+            {
+              "type": "Модуль",
+              "text": "Security 1"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "items": [
+            {
+              "name": "Bulbex cable cutter",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Phase control relay",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Electric motor",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Bundle of wires",
+              "qty": 15,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Модуль",
+              "text": "Security 2"
+            },
+            {
+              "type": "Модуль",
+              "text": "Vents 2"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "items": [
+            {
+              "name": "Power supply unit",
+              "qty": 5,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Phase control relay",
+              "qty": 12,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Electric motor",
+              "qty": 3,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Spark plug",
+              "qty": 16,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Metal spare parts",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Торговец",
+              "text": "Mechanic LL3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Security 3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Vents 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hall-of-fame",
+      "name": "Hall of Fame",
+      "maxLevel": 3,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "Insulating tape",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Pack of nails",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Light bulb",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Cat figurine",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Fleece fabric",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Round pliers",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Торговец",
+              "text": "Mechanic LL2"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "items": [
+            {
+              "name": "Tech manual",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Pliers Elite",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Toolset",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Golden rooster figurine",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Energy-saving lamp",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Pack of screws",
+              "qty": 6,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Duct tape",
+              "qty": 3,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Xenomorph sealing foam",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Tube of Poxeram cold welding",
+              "qty": 2,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": []
+        },
+        {
+          "level": 3,
+          "items": [
+            {
+              "name": "Set of files \"Master\"",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Electric drill",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Bronze lion figurine",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Energy-saving lamp",
+              "qty": 15,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "KEKTAPE duct tape",
+              "qty": 3,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "T-Shaped plug",
+              "qty": 6,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Metal spare parts",
+              "qty": 15,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Power cord",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": "heating",
+      "name": "Heating",
+      "maxLevel": 3,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "Classic matches",
+              "qty": 2,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 25000
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "items": [
+            {
+              "name": "Dry fuel",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Hunting matches",
+              "qty": 2,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Crickent lighter",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 50000
+            },
+            {
+              "type": "Навык",
+              "text": "Endurance Level 1"
+            },
+            {
+              "type": "Модуль",
+              "text": "Vents 1"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "items": [
+            {
+              "name": "Military corrugated tube",
+              "qty": 2,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Radiator helix",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Bundle of wires",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Phase control relay",
+              "qty": 4,
+              "fir": true,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Торговец",
+              "text": "Ragman LL2"
+            },
+            {
+              "type": "Модуль",
+              "text": "Generator 2"
+            },
+            {
+              "type": "Модуль",
+              "text": "Workbench 2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gym",
+      "name": "Gym",
+      "maxLevel": 1,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "Insulating tape",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Metal cutting scissors",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "WD-40 (100ml)",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Toolset",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Screw nuts",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Electric drill",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Bolts",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Модуль",
+              "text": "Defective Wall 6"
+            },
+            {
+              "type": "Модуль",
+              "text": "Illumination 2"
+            },
+            {
+              "type": "Модуль",
+              "text": "Vents 2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "illumination",
+      "name": "Illumination",
+      "maxLevel": 3,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "Crickent lighter",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 10000
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "items": [
+            {
+              "name": "Light bulb",
+              "qty": 14,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Bundle of wires",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Модуль",
+              "text": "Generator 1"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "items": [
+            {
+              "name": "Energy-saving lamp",
+              "qty": 12,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Capacitors",
+              "qty": 7,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Bundle of wires",
+              "qty": 12,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 50000
+            },
+            {
+              "type": "Торговец",
+              "text": "Mechanic LL2"
+            },
+            {
+              "type": "Модуль",
+              "text": "Generator 2"
+            },
+            {
+              "type": "Модуль",
+              "text": "Workbench 1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "intelligence-center",
+      "name": "Intelligence Center",
+      "maxLevel": 3,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "Power cord",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Intelligence folder",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Topographic survey maps",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Factory plan map",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Working LCD",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Модуль",
+              "text": "Security 2"
+            },
+            {
+              "type": "Модуль",
+              "text": "Vents 1"
+            },
+            {
+              "type": "Модуль",
+              "text": "Generator 1"
+            },
+            {
+              "type": "Модуль",
+              "text": "Workbench 1"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "items": [
+            {
+              "name": "Intelligence folder",
+              "qty": 3,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Secure Flash drive",
+              "qty": 3,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Power cord",
+              "qty": 7,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Damaged hard drive",
+              "qty": 8,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Торговец",
+              "text": "Mechanic LL2"
+            },
+            {
+              "type": "Навык",
+              "text": "Attention Level 3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Security 3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Medstation 3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Nutrition Unit 3"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "items": [
+            {
+              "name": "Military cable",
+              "qty": 8,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Military COFDM Wireless Signal Transmitter",
+              "qty": 2,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Far-forward GPS Signal Amplifier Unit",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "VPX Flash Storage Module",
+              "qty": 2,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Military flash drive",
+              "qty": 8,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Secure magnetic tape cassette",
+              "qty": 2,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Торговец",
+              "text": "Prapor LL3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Workbench 3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Generator 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lavatory",
+      "name": "Lavatory",
+      "maxLevel": 3,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "Toilet paper",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Toothpaste",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Soap",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Awl",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 2000
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "items": [
+            {
+              "name": "KEKTAPE duct tape",
+              "qty": 3,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Corrugated hose",
+              "qty": 6,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Pack of screws",
+              "qty": 6,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Electric drill",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Sewing kit",
+              "qty": 2,
+              "fir": true,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Модуль",
+              "text": "Water Collector 1"
+            },
+            {
+              "type": "Модуль",
+              "text": "Vents 1"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "items": [
+            {
+              "name": "Xenomorph sealing foam",
+              "qty": 6,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Corrugated hose",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Pressure gauge",
+              "qty": 2,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Toolset",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Модуль",
+              "text": "Vents 2"
+            },
+            {
+              "type": "Модуль",
+              "text": "Water Collector 2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "library",
+      "name": "Library",
+      "maxLevel": 1,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "BakeEzy cook book",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Slim diary",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Diary",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Tech manual",
+              "qty": 8,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Chainlet",
+              "qty": 2,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Horse figurine",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 400000
+            },
+            {
+              "type": "Навык",
+              "text": "Hideout Management Level 5"
+            },
+            {
+              "type": "Модуль",
+              "text": "Rest Space 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "medstation",
+      "name": "Medstation",
+      "maxLevel": 3,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "Disposable syringe",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Pile of meds",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Aseptic bandage",
+              "qty": 2,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Bottle of OLOLO Multivitamins",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 50000
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "items": [
+            {
+              "name": "Bottle of saline solution",
+              "qty": 6,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Medical tools",
+              "qty": 3,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Medical bloodset",
+              "qty": 2,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Esmarch tourniquet",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 150000
+            },
+            {
+              "type": "Торговец",
+              "text": "Therapist LL2"
+            },
+            {
+              "type": "Навык",
+              "text": "Health Level 2"
+            },
+            {
+              "type": "Модуль",
+              "text": "Generator 1"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "items": [
+            {
+              "name": "Ophthalmoscope",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Bottle of saline solution",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "LEDX Skin Transilluminator",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 500000
+            },
+            {
+              "type": "Торговец",
+              "text": "Therapist LL3"
+            },
+            {
+              "type": "Торговец",
+              "text": "Skier LL2"
+            },
+            {
+              "type": "Навык",
+              "text": "Vitality Level 3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Generator 2"
+            },
+            {
+              "type": "Модуль",
+              "text": "Lavatory 2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nutrition-unit",
+      "name": "Nutrition Unit",
+      "maxLevel": 3,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "Can of white salt",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Power cord",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Phase control relay",
+              "qty": 2,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 25000
+            },
+            {
+              "type": "Модуль",
+              "text": "Generator 1"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "items": [
+            {
+              "name": "Alkaline cleaner for heat exchangers",
+              "qty": 2,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Wrench",
+              "qty": 4,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Corrugated hose",
+              "qty": 4,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Phase control relay",
+              "qty": 3,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Модуль",
+              "text": "Lavatory 2"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "items": [
+            {
+              "name": "Can of Majaica coffee beans",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Pack of sodium bicarbonate",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Smoked Chimney drain cleaner",
+              "qty": 2,
+              "fir": true,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 125000
+            },
+            {
+              "type": "Навык",
+              "text": "Metabolism Level 3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Generator 2"
+            },
+            {
+              "type": "Модуль",
+              "text": "Lavatory 3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Stash 2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rest-space",
+      "name": "Rest Space",
+      "maxLevel": 3,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "Classic matches",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Duct tape",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 10000
+            },
+            {
+              "type": "Модуль",
+              "text": "Vents 1"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "items": [
+            {
+              "name": "Magnet",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "DVD drive",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Energy-saving lamp",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 75000
+            },
+            {
+              "type": "Модуль",
+              "text": "Generator 1"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "items": [
+            {
+              "name": "GreenBat lithium battery",
+              "qty": 4,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Bundle of wires",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Capacitors",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Power cord",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Торговец",
+              "text": "Skier LL3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "scav-case",
+      "name": "Scav Case",
+      "maxLevel": 1,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "Golden rooster figurine",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Lucky Scav Junk box",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Bottle of Fierce Hatchling moonshine",
+              "qty": 3,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Roler Submariner gold wrist watch",
+              "qty": 4,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Golden neck chain",
+              "qty": 8,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Gold skull ring",
+              "qty": 6,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Bronze lion figurine",
+              "qty": 3,
+              "fir": true,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Модуль",
+              "text": "Intelligence Center 2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "maxLevel": 3,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "Construction measuring tape",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 20000
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "items": [
+            {
+              "name": "WD-40 (100ml)",
+              "qty": 2,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Pliers Elite",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "TP-200 TNT brick",
+              "qty": 2,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 45000
+            },
+            {
+              "type": "Навык",
+              "text": "Endurance Level 2"
+            },
+            {
+              "type": "Модуль",
+              "text": "Illumination 1"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "items": [
+            {
+              "name": "NIXXOR lens",
+              "qty": 8,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Working LCD",
+              "qty": 2,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Bundle of wires",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "SSD drive",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Торговец",
+              "text": "Mechanic LL2"
+            },
+            {
+              "type": "Модуль",
+              "text": "Illumination 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shooting-range",
+      "name": "Shooting Range",
+      "maxLevel": 3,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "Metal spare parts",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Bolts",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Screw nuts",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 20000
+            },
+            {
+              "type": "Модуль",
+              "text": "Illumination 1"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "items": [
+            {
+              "name": "Electric motor",
+              "qty": 3,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Construction measuring tape",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Tube of Poxeram cold welding",
+              "qty": 3,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Toolset",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Pack of screws",
+              "qty": 3,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Electric drill",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Metal spare parts",
+              "qty": 8,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "WI-FI Camera",
+              "qty": 3,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Bundle of wires",
+              "qty": 6,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Energy-saving lamp",
+              "qty": 6,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Модуль",
+              "text": "Illumination 3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Workbench 2"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "items": [
+            {
+              "name": "Set of files \"Master\"",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Printed circuit board",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Bundle of wires",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Metal spare parts",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Capacitors",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Phase control relay",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Power cord",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Leatherman Multitool",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Tech manual",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            }
+          ],
+          "conditions": []
+        }
+      ]
+    },
+    {
+      "id": "solar-power",
+      "name": "Solar Power",
+      "maxLevel": 1,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "Phased array element",
+              "qty": 6,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Advanced current converter",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Working LCD",
+              "qty": 3,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Military cable",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Military power filter",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Euros",
+              "qty": 25000
+            },
+            {
+              "type": "Торговец",
+              "text": "Peacekeeper LL4"
+            },
+            {
+              "type": "Модуль",
+              "text": "Generator 3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Workbench 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stash",
+      "name": "Stash",
+      "maxLevel": 4,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [],
+          "conditions": [
+            {
+              "type": "Издание/условие",
+              "text": "Owning standard game edition"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "items": [
+            {
+              "name": "WD-40 (100ml)",
+              "qty": 4,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Hand drill",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Pack of nails",
+              "qty": 5,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Pack of screws",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Издание/условие",
+              "text": "Owning \"Left Behind\" game edition OR",
+              "note": "Альтернатива: иметь издание Left Behind или собрать предметы/валюту ниже"
+            },
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 2500000
+            },
+            {
+              "type": "Модуль",
+              "text": "Vents 1"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "items": [
+            {
+              "name": "Electric drill",
+              "qty": 2,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Pack of screws",
+              "qty": 15,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Pack of nails",
+              "qty": 7,
+              "fir": true,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Издание/условие",
+              "text": "Owning \"Prepare for Escape\" game edition OR",
+              "note": "Альтернатива: иметь издание Prepare for Escape или собрать предметы/валюту ниже"
+            },
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 8500000
+            },
+            {
+              "type": "Торговец",
+              "text": "Prapor LL3"
+            },
+            {
+              "type": "Торговец",
+              "text": "Ragman LL3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Vents 2"
+            },
+            {
+              "type": "Модуль",
+              "text": "Heating 2"
+            }
+          ]
+        },
+        {
+          "level": 4,
+          "items": [
+            {
+              "name": "Screw nuts",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Bolts",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Shustrilo sealing foam",
+              "qty": 8,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Ratchet wrench",
+              "qty": 2,
+              "fir": true,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Издание/условие",
+              "text": "Owning \"Edge of Darkness\" or \"The Unheard\" game edition OR",
+              "note": "Альтернатива: иметь EoD/The Unheard или собрать предметы/валюту ниже"
+            },
+            {
+              "type": "Валюта",
+              "text": "Euros",
+              "qty": 200000
+            },
+            {
+              "type": "Торговец",
+              "text": "Peacekeeper LL4"
+            },
+            {
+              "type": "Торговец",
+              "text": "Ragman LL4"
+            },
+            {
+              "type": "Модуль",
+              "text": "Generator 3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Workbench 3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Heating 3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Intelligence Center 2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vents",
+      "name": "Vents",
+      "maxLevel": 3,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 25000
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "items": [
+            {
+              "name": "Metal spare parts",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "CPU fan",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Car battery",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Electric motor",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            }
+          ],
+          "conditions": []
+        },
+        {
+          "level": 3,
+          "items": [
+            {
+              "name": "Printed circuit board",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Electric motor",
+              "qty": 4,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Metal spare parts",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Bundle of wires",
+              "qty": 14,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Car battery",
+              "qty": 4,
+              "fir": true,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Навык",
+              "text": "Strength Level 2"
+            },
+            {
+              "type": "Модуль",
+              "text": "Generator 2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "water-collector",
+      "name": "Water Collector",
+      "maxLevel": 3,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "Duct tape",
+              "qty": 3,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Screw nuts",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Bolts",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Corrugated hose",
+              "qty": 4,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Модуль",
+              "text": "Security 1"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "items": [
+            {
+              "name": "Toolset",
+              "qty": 2,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Corrugated hose",
+              "qty": 6,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Electric motor",
+              "qty": 2,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "KEKTAPE duct tape",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Торговец",
+              "text": "Jaeger LL2"
+            },
+            {
+              "type": "Навык",
+              "text": "Attention Level 3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Workbench 2"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "items": [
+            {
+              "name": "Ratchet wrench",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Pliers Elite",
+              "qty": 2,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Shustrilo sealing foam",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 20000
+            },
+            {
+              "type": "Торговец",
+              "text": "Jaeger LL3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Generator 3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Heating 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weapon-rack",
+      "name": "Weapon Rack",
+      "maxLevel": 3,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "Pack of nails",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Energy-saving lamp",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Insulating tape",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Hand drill",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Bolts",
+              "qty": 15,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Metal cutting scissors",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Xenomorph sealing foam",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Торговец",
+              "text": "Mechanic LL2"
+            },
+            {
+              "type": "Модуль",
+              "text": "Illumination 3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Stash 2"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "items": [
+            {
+              "name": "Metal spare parts",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Pack of screws",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Electric drill",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Bundle of wires",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Set of files \"Master\"",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Tube of Poxeram cold welding",
+              "qty": 3,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Energy-saving lamp",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Duct tape",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Weapon parts",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Торговец",
+              "text": "Mechanic LL3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Shooting Range 2"
+            },
+            {
+              "type": "Модуль",
+              "text": "Workbench 2"
+            },
+            {
+              "type": "Модуль",
+              "text": "Stash 3"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "items": [
+            {
+              "name": "Electric drill",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Energy-saving lamp",
+              "qty": 15,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Metal spare parts",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "KEKTAPE duct tape",
+              "qty": 5,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Bundle of wires",
+              "qty": 15,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Shustrilo sealing foam",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Tech manual",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "#FireKlean gun lube",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Торговец",
+              "text": "Mechanic LL4"
+            },
+            {
+              "type": "Модуль",
+              "text": "Shooting Range 3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Workbench 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "workbench",
+      "name": "Workbench",
+      "maxLevel": 3,
+      "isEvent": false,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "Screw nuts",
+              "qty": 2,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Bolts",
+              "qty": 2,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Leatherman Multitool",
+              "qty": 1,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": []
+        },
+        {
+          "level": 2,
+          "items": [
+            {
+              "name": "Bolts",
+              "qty": 10,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Toolset",
+              "qty": 3,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Set of files \"Master\"",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Electric drill",
+              "qty": 2,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "Weapon parts",
+              "qty": 3,
+              "fir": false,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Торговец",
+              "text": "Mechanic LL2"
+            },
+            {
+              "type": "Модуль",
+              "text": "Illumination 2"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "items": [
+            {
+              "name": "Can of thermite",
+              "qty": 5,
+              "fir": false,
+              "optional": false
+            },
+            {
+              "name": "Pliers Elite",
+              "qty": 2,
+              "fir": true,
+              "optional": false
+            },
+            {
+              "name": "#FireKlean gun lube",
+              "qty": 1,
+              "fir": true,
+              "optional": false
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Валюта",
+              "text": "Roubles",
+              "qty": 395000
+            },
+            {
+              "type": "Торговец",
+              "text": "Mechanic LL3"
+            },
+            {
+              "type": "Модуль",
+              "text": "Generator 2"
+            },
+            {
+              "type": "Модуль",
+              "text": "Stash 2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "christmas-tree",
+      "name": "Christmas Tree",
+      "maxLevel": 1,
+      "isEvent": true,
+      "levels": [
+        {
+          "level": 1,
+          "items": [
+            {
+              "name": "Christmas tree ornament (Red)",
+              "qty": 1,
+              "fir": true,
+              "optional": false,
+              "note": "Ивентовый/ограниченный модуль"
+            },
+            {
+              "name": "Christmas tree ornament (Silver)",
+              "qty": 1,
+              "fir": true,
+              "optional": false,
+              "note": "Ивентовый/ограниченный модуль"
+            },
+            {
+              "name": "Christmas tree ornament (Violet)",
+              "qty": 1,
+              "fir": true,
+              "optional": false,
+              "note": "Ивентовый/ограниченный модуль"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Модуль",
+              "text": "Generator 1",
+              "note": "Ивентовый/ограниченный модуль"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
