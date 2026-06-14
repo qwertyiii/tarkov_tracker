@@ -1,15 +1,17 @@
-// Node smoke test of the app's own logic (src/lib/items.js) against data.json.
-// Confirms buildSummary at builtLevels=0 reproduces correct totals, that the
-// FIR/STD split keys are distinct, and that build-readiness ignores optionals.
+// Smoke test of the app's own logic (src/lib/items.js) against data.json.
+// items.js импортирует icons.json, поэтому грузим его через загрузчик Vite
+// (как в реальном приложении), а не напрямую через Node ESM.
 import assert from 'node:assert'
 import { readFileSync } from 'node:fs'
-import {
-  buildSummary,
-  isLevelReady,
-  itemKey,
-  moduleItems,
-  pendingLevels,
-} from '../src/lib/items.js'
+import { createServer } from 'vite'
+
+const vite = await createServer({
+  server: { middlewareMode: true },
+  appType: 'custom',
+  logLevel: 'silent',
+})
+const { buildSummary, isLevelReady, itemKey, moduleItems, pendingLevels } =
+  await vite.ssrLoadModule('/src/lib/items.js')
 
 const data = JSON.parse(readFileSync(new URL('../src/data/data.json', import.meta.url)))
 
@@ -88,3 +90,5 @@ console.log('SMOKE OK:', {
   summaryRows: summary.length,
   dualExample: dualName,
 })
+
+await vite.close()

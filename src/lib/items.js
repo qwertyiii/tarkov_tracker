@@ -1,6 +1,13 @@
 // Pure helpers deriving collect-lists and the hideout-wide summary from the
 // static data + user state (builtLevels, collected). Nothing here touches
 // storage or React.
+import icons from '../data/icons.json'
+
+// Иконка и короткое имя предмета по точному названию из icons.json.
+// Если предмета нет — возвращает пустой объект (без ошибок).
+export function iconFor(name) {
+  return icons[name] || {}
+}
 
 // Key of a collectible item = name + FIR class. FIR and non-FIR versions of the
 // same item are DIFFERENT collectibles (different slots), see ТЗ 4.2.

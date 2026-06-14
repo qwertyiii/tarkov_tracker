@@ -11,6 +11,7 @@ import { FirBadge, OptionalBadge, QtyBadge } from './Badges'
 // Одна строка собираемого предмета со счётчиком найденного. Используется в обоих
 // окнах. Пропсы:
 //   name, fir, optional — описание предмета
+//   icon — URL картинки (или пусто), short — короткое имя (или пусто)
 //   lineQty — сколько нужно в этом контексте (в Своде совпадает с need)
 //   need    — сколько нужно по всему убежищу (максимум счётчика и порог «собрано»)
 //   found   — сколько уже найдено (общий счётчик collected[itemKey])
@@ -20,6 +21,8 @@ export default function ItemRow({
   name,
   fir,
   optional,
+  icon,
+  short,
   lineQty,
   need,
   found,
@@ -60,6 +63,44 @@ export default function ItemRow({
         '&:hover': { backgroundColor: 'rgba(199,162,107,0.06)' },
       }}
     >
+      {/* Картинка предмета (или заглушка). Клик = отметить/снять «собрано». */}
+      <Box
+        onClick={() => onSetCount(done ? 0 : need)}
+        title="Отметить собранным"
+        sx={{
+          width: 40,
+          height: 40,
+          flexShrink: 0,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: '#15140f',
+          border: '1px solid',
+          borderColor: 'divider',
+          borderRadius: 0.5,
+          overflow: 'hidden',
+          cursor: 'pointer',
+        }}
+      >
+        {icon ? (
+          <Box
+            component="img"
+            src={icon}
+            alt={name}
+            loading="lazy"
+            sx={{ width: '100%', height: '100%', objectFit: 'contain' }}
+          />
+        ) : (
+          <Typography
+            variant="caption"
+            color="text.secondary"
+            sx={{ fontSize: 11, px: 0.25, textAlign: 'center', lineHeight: 1 }}
+          >
+            {short || '?'}
+          </Typography>
+        )}
+      </Box>
+
       <Box sx={{ minWidth: 0, flex: 1 }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.75, flexWrap: 'wrap' }}>
           <Typography

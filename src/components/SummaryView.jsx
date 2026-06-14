@@ -9,7 +9,7 @@ import FormControlLabel from '@mui/material/FormControlLabel'
 import Switch from '@mui/material/Switch'
 
 import ItemRow from './ItemRow'
-import { buildSummary, sortByCollected } from '../lib/items'
+import { buildSummary, iconFor, sortByCollected } from '../lib/items'
 
 // Окно 2 — единый список всех предметов по убежищу, сгруппированный по itemKey
 // (ТЗ 6). Со счётчиком found/need, поиском, «скрыть собранные» и «2 колонки».
@@ -35,7 +35,11 @@ export default function SummaryView({
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
     let rows = groups
-    if (q) rows = rows.filter((g) => g.name.toLowerCase().includes(q))
+    if (q)
+      rows = rows.filter((g) => {
+        const short = (iconFor(g.name).short || '').toLowerCase()
+        return g.name.toLowerCase().includes(q) || short.includes(q)
+      })
     if (hideCollected) rows = rows.filter((g) => !isDone(g))
     return sortByCollected(rows, isDone)
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -44,19 +48,24 @@ export default function SummaryView({
   const total = groups.length
   const done = groups.filter(isDone).length
 
-  const renderRow = (g) => (
+  const renderRow = (g) => {
+    const meta = iconFor(g.name)
+    return (
     <ItemRow
       key={g.key}
       name={g.name}
       fir={g.fir}
       optional={g.optional}
+      icon={meta.icon}
+      short={meta.short}
       lineQty={g.totalQty}
       need={g.totalQty}
       found={collected[g.key] || 0}
       onSetCount={(n) => setCount(g.key, n)}
       subtitle={'Нужен в: ' + g.usedIn.map((u) => `${u.module} ${u.level}`).join(', ')}
     />
-  )
+    )
+  }
 
   return (
     <Box>

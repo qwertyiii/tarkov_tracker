@@ -15,7 +15,7 @@ import ConstructionIcon from '@mui/icons-material/Construction'
 
 import ItemRow from './ItemRow'
 import Conditions from './Conditions'
-import { isLevelReady, itemKey, pendingLevels, sortByCollected } from '../lib/items'
+import { iconFor, isLevelReady, itemKey, pendingLevels, sortByCollected } from '../lib/items'
 
 // Список предметов одного уровня (или объединённый). Сортировка: «не готово для
 // этого уровня» вверх, «готово» (found >= qty этой строки) вниз. need берётся
@@ -24,7 +24,11 @@ function LevelItems({ items, collected, needMap, onSetCount, itemQuery }) {
   const sorted = useMemo(() => {
     const q = (itemQuery || '').trim().toLowerCase()
     let rows = items.map((it) => ({ ...it, key: itemKey(it.name, it.fir) }))
-    if (q) rows = rows.filter((r) => r.name.toLowerCase().includes(q))
+    if (q)
+      rows = rows.filter((r) => {
+        const short = (iconFor(r.name).short || '').toLowerCase()
+        return r.name.toLowerCase().includes(q) || short.includes(q)
+      })
     // «готово для уровня» = найдено не меньше, чем нужно в этой строке
     return sortByCollected(rows, (r) => (collected[r.key] || 0) >= r.qty)
   }, [items, collected, itemQuery])
@@ -38,18 +42,23 @@ function LevelItems({ items, collected, needMap, onSetCount, itemQuery }) {
   }
   return (
     <Box>
-      {sorted.map((it) => (
-        <ItemRow
-          key={it.key + '@' + it.level}
-          name={it.name}
-          fir={it.fir}
-          optional={it.optional}
-          lineQty={it.qty}
-          need={needMap.get(it.key) ?? it.qty}
-          found={collected[it.key] || 0}
-          onSetCount={(n) => onSetCount(it.key, n)}
-        />
-      ))}
+      {sorted.map((it) => {
+        const meta = iconFor(it.name)
+        return (
+          <ItemRow
+            key={it.key + '@' + it.level}
+            name={it.name}
+            fir={it.fir}
+            optional={it.optional}
+            icon={meta.icon}
+            short={meta.short}
+            lineQty={it.qty}
+            need={needMap.get(it.key) ?? it.qty}
+            found={collected[it.key] || 0}
+            onSetCount={(n) => onSetCount(it.key, n)}
+          />
+        )
+      })}
     </Box>
   )
 }

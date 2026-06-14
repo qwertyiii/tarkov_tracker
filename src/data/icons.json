@@ -1,0 +1,474 @@
+{
+  "DVD привод": {
+    "icon": "https://assets.tarkov.dev/5734781f24597737e04bf32a-icon.webp",
+    "short": "DVD"
+  },
+  "SSD диск": {
+    "icon": "https://assets.tarkov.dev/590c392f86f77444754deb29-icon.webp",
+    "short": "SSD"
+  },
+  "WD-40 (100мл)": {
+    "icon": "https://assets.tarkov.dev/590c5bbd86f774785762df04-icon.webp",
+    "short": "WD-40"
+  },
+  "WI-FI Камера": {
+    "icon": "https://assets.tarkov.dev/5b4391a586f7745321235ab2-icon.webp",
+    "short": "Камера"
+  },
+  "Автомобильный аккумулятор": {
+    "icon": "https://assets.tarkov.dev/5733279d245977289b77ec24-icon.webp",
+    "short": "Авто аккум."
+  },
+  "Аналоговый термометр": {
+    "icon": "https://assets.tarkov.dev/5d1b32c186f774252167a530-icon.webp",
+    "short": "Терм."
+  },
+  "Арамидная ткань": {
+    "icon": "https://assets.tarkov.dev/5e2af4d286f7746d4159f07a-icon.webp",
+    "short": "Арамид"
+  },
+  "Банка кофе Majaica": {
+    "icon": "https://assets.tarkov.dev/5af0484c86f7740f02001f7f-icon.webp",
+    "short": "Majaica"
+  },
+  "Банка с витаминами OLOLO": {
+    "icon": "https://assets.tarkov.dev/62a0a043cf4a99369e2624a5-icon.webp",
+    "short": "Витамины"
+  },
+  "Банка с солью": {
+    "icon": "https://assets.tarkov.dev/62a09ee4cf4a99369e262453-icon.webp",
+    "short": "Соль"
+  },
+  "Банка с термитной смесью": {
+    "icon": "https://assets.tarkov.dev/60391a8b3364dc22b04d0ce5-icon.webp",
+    "short": "Термит"
+  },
+  "Бинт стерильный": {
+    "icon": "https://assets.tarkov.dev/544fb25a4bdc2dfb738b4567-icon.webp",
+    "short": "Бинт"
+  },
+  "Блок питания": {
+    "icon": "https://assets.tarkov.dev/57347c2e24597744902c94a1-icon.webp",
+    "short": "БП"
+  },
+  "Болты": {
+    "icon": "https://assets.tarkov.dev/57347c5b245977448d35f6e1-icon.webp",
+    "short": "Болты"
+  },
+  "Бронзовый лев": {
+    "icon": "https://assets.tarkov.dev/59e3639286f7741777737013-icon.webp",
+    "short": "Лев"
+  },
+  "Бутылка самогона \"Лютый Топорист\"": {
+    "icon": "https://assets.tarkov.dev/5d1b376e86f774252519444e-icon.webp",
+    "short": "Самогон"
+  },
+  "Бутылка физраствора": {
+    "icon": "https://assets.tarkov.dev/59e3606886f77417674759a5-icon.webp",
+    "short": "NaCl"
+  },
+  "Военная гофрированная трубка": {
+    "icon": "https://assets.tarkov.dev/619cbf476b8a1b37a54eebf8-icon.webp",
+    "short": "Гофра"
+  },
+  "Военный COFDM беспроводной передатчик сигналов": {
+    "icon": "https://assets.tarkov.dev/5c052f6886f7746b1e3db148-icon.webp",
+    "short": "SG-C10"
+  },
+  "Военный аккумулятор 6-СТЭН-140-М": {
+    "icon": "https://assets.tarkov.dev/5d03794386f77420415576f5-icon.webp",
+    "short": "АКБ танковый"
+  },
+  "Военный кабель": {
+    "icon": "https://assets.tarkov.dev/5d0375ff86f774186372f685-icon.webp",
+    "short": "ВКабель"
+  },
+  "Военный фильтр питания": {
+    "icon": "https://assets.tarkov.dev/5d0378d486f77420421a5ff4-icon.webp",
+    "short": "ВФильтр"
+  },
+  "Военный флеш-накопитель": {
+    "icon": "https://assets.tarkov.dev/62a0a16d0b9d3c46de5b6e97-icon.webp",
+    "short": "В. Флешка"
+  },
+  "Воздушный фильтр для противогаза": {
+    "icon": "https://assets.tarkov.dev/590c595c86f7747884343ad7-icon.webp",
+    "short": "Фильтр"
+  },
+  "Гаечный ключ": {
+    "icon": "https://assets.tarkov.dev/590c311186f77424d1667482-icon.webp",
+    "short": "ГКлюч"
+  },
+  "Гайки": {
+    "icon": "https://assets.tarkov.dev/57347c77245977448d35f6e2-icon.webp",
+    "short": "Гайки"
+  },
+  "Гофрированный шланг": {
+    "icon": "https://assets.tarkov.dev/59e35cbb86f7741778269d83-icon.webp",
+    "short": "ГШланг"
+  },
+  "Датчик давления": {
+    "icon": "https://assets.tarkov.dev/5d1b327086f7742525194449-icon.webp",
+    "short": "Датчик"
+  },
+  "Ежедневник": {
+    "icon": "https://assets.tarkov.dev/590c645c86f77412b01304d9-icon.webp",
+    "short": "Дневник"
+  },
+  "Елочная игрушка в виде шара (Красная)": {
+    "icon": "https://assets.tarkov.dev/5df8a6a186f77412640e2e80-icon.webp",
+    "short": "Шар"
+  },
+  "Елочная игрушка в виде шара (Серебристая)": {
+    "icon": "https://assets.tarkov.dev/5df8a72c86f77412640e2e83-icon.webp",
+    "short": "Шар"
+  },
+  "Елочная игрушка в виде шара (Фиолетовая)": {
+    "icon": "https://assets.tarkov.dev/5df8a77486f77412672a1e3f-icon.webp",
+    "short": "Шар"
+  },
+  "Жгут Эсмарха": {
+    "icon": "https://assets.tarkov.dev/5e831507ea0a7c419c2f9bd9-icon.webp",
+    "short": "Эсмарх"
+  },
+  "Зажигалка Crickent": {
+    "icon": "https://assets.tarkov.dev/56742c284bdc2d98058b456d-icon.webp",
+    "short": "Crickent"
+  },
+  "Зажигалка выживальщика SurvL": {
+    "icon": "https://assets.tarkov.dev/5e2af37686f774755a234b65-icon.webp",
+    "short": "SurvL"
+  },
+  "Защищенная кассета с магнитной пленкой": {
+    "icon": "https://assets.tarkov.dev/61bf7c024770ee6f9c6b8b53-icon.webp",
+    "short": "SMT"
+  },
+  "Защищенный флеш-накопитель": {
+    "icon": "https://assets.tarkov.dev/590c621186f774138d11ea29-icon.webp",
+    "short": "Флешка"
+  },
+  "Золотая цепочка": {
+    "icon": "https://assets.tarkov.dev/5734758f24597738025ee253-icon.webp",
+    "short": "Зол. цепь"
+  },
+  "Золотое кольцо с черепом": {
+    "icon": "https://assets.tarkov.dev/5d235a5986f77443f6329bc6-icon.webp",
+    "short": "Череп"
+  },
+  "Золотой петух": {
+    "icon": "https://assets.tarkov.dev/5bc9bc53d4351e00367fbcee-icon.webp",
+    "short": "Петух"
+  },
+  "Золотые часы Roler Submariner": {
+    "icon": "https://assets.tarkov.dev/59faf7ca86f7740dbe19f6c2-icon.webp",
+    "short": "Roler"
+  },
+  "Зубная паста": {
+    "icon": "https://assets.tarkov.dev/57347c93245977448d35f6e3-icon.webp",
+    "short": "Зуб. паста"
+  },
+  "Изолента": {
+    "icon": "https://assets.tarkov.dev/5734795124597738002c6176-icon.webp",
+    "short": "Изолента"
+  },
+  "Кабелерез Bulbex": {
+    "icon": "https://assets.tarkov.dev/619cbfeb6b8a1b37a54eebfa-icon.webp",
+    "short": "Bulbex"
+  },
+  "Кейс для хлама": {
+    "icon": "https://assets.tarkov.dev/5b7c710788a4506dec015957-icon.webp",
+    "short": "Хлам"
+  },
+  "Книга рецептов BakeEzy": {
+    "icon": "https://assets.tarkov.dev/62a09e73af34e73a266d932a-icon.webp",
+    "short": "BakeEzy"
+  },
+  "Конденсаторы": {
+    "icon": "https://assets.tarkov.dev/5c06782b86f77426df5407d2-icon.webp",
+    "short": "Конд."
+  },
+  "Круглогубцы": {
+    "icon": "https://assets.tarkov.dev/5d1b31ce86f7742523398394-icon.webp",
+    "short": "КГубцы"
+  },
+  "Кувалда \"Лютый удар\"": {
+    "icon": "https://assets.tarkov.dev/63a0b208f444d32d6f03ea1e-icon.webp",
+    "short": "Кувалда"
+  },
+  "Кусок мыла": {
+    "icon": "https://assets.tarkov.dev/5c13cd2486f774072c757944-icon.webp",
+    "short": "Мыло"
+  },
+  "Лампа накаливания": {
+    "icon": "https://assets.tarkov.dev/5d1b392c86f77425243e98fe-icon.webp",
+    "short": "Лампа"
+  },
+  "Липкая лента \"KEKТЕЙП\"": {
+    "icon": "https://assets.tarkov.dev/5e2af29386f7746d4159f077-icon.webp",
+    "short": "КЕК"
+  },
+  "Литиевая аккумуляторная батарейка GreenBat": {
+    "icon": "https://assets.tarkov.dev/5e2aedd986f7746d404f3aa4-icon.webp",
+    "short": "GreenBat"
+  },
+  "Магнит": {
+    "icon": "https://assets.tarkov.dev/590a391c86f774385a33c404-icon.webp",
+    "short": "Магнит"
+  },
+  "Материалы топографической разведки": {
+    "icon": "https://assets.tarkov.dev/62a0a124de7ac81993580542-icon.webp",
+    "short": "Карты"
+  },
+  "Медицинские инструменты": {
+    "icon": "https://assets.tarkov.dev/619cc01e0a7c3a1a2731940c-icon.webp",
+    "short": "Мед."
+  },
+  "Монтажная пена Shustrilo": {
+    "icon": "https://assets.tarkov.dev/590c35a486f774273531c822-icon.webp",
+    "short": "Shus"
+  },
+  "Монтажная пена Xenomorph": {
+    "icon": "https://assets.tarkov.dev/590c346786f77423e50ed342-icon.webp",
+    "short": "Xeno"
+  },
+  "Монтажный скотч": {
+    "icon": "https://assets.tarkov.dev/57347c1124597737fb1379e3-icon.webp",
+    "short": "Скотч"
+  },
+  "Мультитул Leatherman": {
+    "icon": "https://assets.tarkov.dev/544fb5454bdc2df8738b456a-icon.webp",
+    "short": "Мультитул"
+  },
+  "Набор для переливания крови": {
+    "icon": "https://assets.tarkov.dev/5b4335ba86f7744d2837a264-icon.webp",
+    "short": "Перелив."
+  },
+  "Набор для ремонта бронежилетов": {
+    "icon": "https://assets.tarkov.dev/591094e086f7747caa7bb2ef-icon.webp",
+    "short": "Ремкомплект для брони"
+  },
+  "Набор для шитья": {
+    "icon": "https://assets.tarkov.dev/61bf83814088ec1a363d7097-icon.webp",
+    "short": "Красавч."
+  },
+  "Набор инструментов": {
+    "icon": "https://assets.tarkov.dev/590c2e1186f77425357b6124-icon.webp",
+    "short": "Инструменты"
+  },
+  "Набор медикаментов": {
+    "icon": "https://assets.tarkov.dev/5d1b3a5d86f774252167ba22-icon.webp",
+    "short": "Мед."
+  },
+  "Набор металлических частей": {
+    "icon": "https://assets.tarkov.dev/61bf7b6302b3924be92fa8c3-icon.webp",
+    "short": "Зап.части"
+  },
+  "Набор напильников \"Мастер\"": {
+    "icon": "https://assets.tarkov.dev/62a0a0bb621468534a797ad5-icon.webp",
+    "short": "Мастер"
+  },
+  "Ножницы для резки металла": {
+    "icon": "https://assets.tarkov.dev/5d40419286f774318526545f-icon.webp",
+    "short": "Металл"
+  },
+  "Объектив NIXXOR": {
+    "icon": "https://assets.tarkov.dev/5d1b2ffd86f77425243e8d17-icon.webp",
+    "short": "NIXXOR"
+  },
+  "Обычные спички": {
+    "icon": "https://assets.tarkov.dev/57347b8b24597737dd42e192-icon.webp",
+    "short": "Спички"
+  },
+  "Оружейные части": {
+    "icon": "https://assets.tarkov.dev/5d1c819a86f774771b0acd6c-icon.webp",
+    "short": "Ор. части"
+  },
+  "Офтальмоскоп": {
+    "icon": "https://assets.tarkov.dev/5af0534a86f7743b6f354284-icon.webp",
+    "short": "ОСкоп"
+  },
+  "Охотничьи спички": {
+    "icon": "https://assets.tarkov.dev/5e2af2bc86f7746d3f3c33fc-icon.webp",
+    "short": "ОСпички"
+  },
+  "Пакет саморезов": {
+    "icon": "https://assets.tarkov.dev/59e35ef086f7741777737012-icon.webp",
+    "short": "Саморезы"
+  },
+  "Папка с разведданными": {
+    "icon": "https://assets.tarkov.dev/5c12613b86f7743bbe2c3f76-icon.webp",
+    "short": "Разведданные"
+  },
+  "Пачка гвоздей": {
+    "icon": "https://assets.tarkov.dev/590c31c586f774245e3141b2-icon.webp",
+    "short": "Гвозди"
+  },
+  "Пачка соды": {
+    "icon": "https://assets.tarkov.dev/59e35abd86f7741778269d82-icon.webp",
+    "short": "Сода"
+  },
+  "Передовой блок усилителя GPS сигнала": {
+    "icon": "https://assets.tarkov.dev/6389c7f115805221fb410466-icon.webp",
+    "short": "GPSA"
+  },
+  "Передовой преобразователь тока": {
+    "icon": "https://assets.tarkov.dev/6389c85357baa773a825b356-icon.webp",
+    "short": "ППТ"
+  },
+  "Печатная плата": {
+    "icon": "https://assets.tarkov.dev/590a3b0486f7743954552bdb-icon.webp",
+    "short": "Плата"
+  },
+  "План-карта Завода": {
+    "icon": "https://assets.tarkov.dev/574eb85c245977648157eec3-icon.webp",
+    "short": "Завод"
+  },
+  "Плоскогубцы Elite": {
+    "icon": "https://assets.tarkov.dev/5af04b6486f774195a3ebb49-icon.webp",
+    "short": "Elite"
+  },
+  "Поврежденный жесткий диск": {
+    "icon": "https://assets.tarkov.dev/590a386e86f77429692b27ab-icon.webp",
+    "short": "HDD"
+  },
+  "Полиамидная ткань Кордура": {
+    "icon": "https://assets.tarkov.dev/5e2af41e86f774755a234b67-icon.webp",
+    "short": "Кордура"
+  },
+  "Процессорный кулер": {
+    "icon": "https://assets.tarkov.dev/5734779624597737e04bf329-icon.webp",
+    "short": "Кулер"
+  },
+  "Пучок проводов": {
+    "icon": "https://assets.tarkov.dev/5c06779c86f77426e00dd782-icon.webp",
+    "short": "Провода"
+  },
+  "Рабочий LCD дисплей": {
+    "icon": "https://assets.tarkov.dev/5d1b304286f774253763a528-icon.webp",
+    "short": "LCD"
+  },
+  "Реле контроля фаз": {
+    "icon": "https://assets.tarkov.dev/5d1b313086f77425227d1678-icon.webp",
+    "short": "Реле"
+  },
+  "Рулон туалетной бумаги": {
+    "icon": "https://assets.tarkov.dev/5c13cef886f774072e618e82-icon.webp",
+    "short": "ТБшка"
+  },
+  "Ручная дрель": {
+    "icon": "https://assets.tarkov.dev/5d1b317c86f7742523398392-icon.webp",
+    "short": "Руч. дрель"
+  },
+  "Светодиодный трансиллюминатор кожи LEDX": {
+    "icon": "https://assets.tarkov.dev/5c0530ee86f774697952d952-icon.webp",
+    "short": "LEDX"
+  },
+  "Свеча зажигания": {
+    "icon": "https://assets.tarkov.dev/590a3c0a86f774385a33c450-icon.webp",
+    "short": "Свеча"
+  },
+  "Силиконовая трубка": {
+    "icon": "https://assets.tarkov.dev/5d1b39a386f774252339976f-icon.webp",
+    "short": "Трубка"
+  },
+  "Силовой кабель": {
+    "icon": "https://assets.tarkov.dev/59e36c6f86f774176c10a2a7-icon.webp",
+    "short": "Кабель"
+  },
+  "Спираль накаливания": {
+    "icon": "https://assets.tarkov.dev/5d1c774f86f7746d6620f8db-icon.webp",
+    "short": "Спираль"
+  },
+  "Спрей от насекомых PAID AntiRoach": {
+    "icon": "https://assets.tarkov.dev/59e3596386f774176c10a2a2-icon.webp",
+    "short": "PAID"
+  },
+  "Средство для прочистки труб \"Копченый Дымоход\"": {
+    "icon": "https://assets.tarkov.dev/5e2af00086f7746d3f3c33f7-icon.webp",
+    "short": "КД"
+  },
+  "Статуэтка коня": {
+    "icon": "https://assets.tarkov.dev/573478bc24597738002c6175-icon.webp",
+    "short": "Конь"
+  },
+  "Статуэтка кота": {
+    "icon": "https://assets.tarkov.dev/59e3658a86f7741776641ac4-icon.webp",
+    "short": "Кот"
+  },
+  "Строительная измерительная рулетка": {
+    "icon": "https://assets.tarkov.dev/590c2c9c86f774245b1f03f2-icon.webp",
+    "short": "Рулетка"
+  },
+  "Сухое горючее": {
+    "icon": "https://assets.tarkov.dev/590a373286f774287540368b-icon.webp",
+    "short": "СухГор"
+  },
+  "Твердотельный накопитель VPX Flash Storage Module": {
+    "icon": "https://assets.tarkov.dev/5c05300686f7746dce784e5d-icon.webp",
+    "short": "VPX"
+  },
+  "Техническая документация": {
+    "icon": "https://assets.tarkov.dev/590c639286f774151567fa95-icon.webp",
+    "short": "Мануал"
+  },
+  "Тонкий ежедневник": {
+    "icon": "https://assets.tarkov.dev/590c651286f7741e566b6461-icon.webp",
+    "short": "ТДневник"
+  },
+  "Трещоточный ключ": {
+    "icon": "https://assets.tarkov.dev/60391afc25aff57af81f7085-icon.webp",
+    "short": "Трещ."
+  },
+  "Тройник": {
+    "icon": "https://assets.tarkov.dev/57347cd0245977445a2d6ff1-icon.webp",
+    "short": "Тройник"
+  },
+  "Тротиловая шашка ТП-200": {
+    "icon": "https://assets.tarkov.dev/60391b0fb847c71012789415-icon.webp",
+    "short": "ТП-200"
+  },
+  "Тюбик холодной сварки Poxeram": {
+    "icon": "https://assets.tarkov.dev/5e2af22086f7746d3f3c33fa-icon.webp",
+    "short": "Poxeram"
+  },
+  "Флисовая ткань": {
+    "icon": "https://assets.tarkov.dev/5e2af47786f7746d404f3aaa-icon.webp",
+    "short": "Флис"
+  },
+  "Шарнирный ключ КШС": {
+    "icon": "https://assets.tarkov.dev/619cbfccbedcde2f5b3f7bdd-icon.webp",
+    "short": "КШС"
+  },
+  "Шило": {
+    "icon": "https://assets.tarkov.dev/62a0a098de7ac8199358053b-icon.webp",
+    "short": "Шило"
+  },
+  "Шприц в упаковке": {
+    "icon": "https://assets.tarkov.dev/5d1b3f2d86f774253763b735-icon.webp",
+    "short": "Шприц"
+  },
+  "Щелочное средство для промывки теплообменных поверхностей": {
+    "icon": "https://assets.tarkov.dev/59faf98186f774067b6be103-icon.webp",
+    "short": "Щелочь"
+  },
+  "Электродвигатель": {
+    "icon": "https://assets.tarkov.dev/5d1b2fa286f77425227d1674-icon.webp",
+    "short": "Двигатель"
+  },
+  "Электродрель": {
+    "icon": "https://assets.tarkov.dev/59e35de086f7741778269d84-icon.webp",
+    "short": "Дрель"
+  },
+  "Элемент фазированной решетки РЛС": {
+    "icon": "https://assets.tarkov.dev/5d03775b86f774203e7e0c4b-icon.webp",
+    "short": "ФАР"
+  },
+  "Энергосберегающая лампа": {
+    "icon": "https://assets.tarkov.dev/590a3cd386f77436f20848cb-icon.webp",
+    "short": "ЭСЛ"
+  },
+  "Ювелирная цепочка": {
+    "icon": "https://assets.tarkov.dev/573474f924597738002c6174-icon.webp",
+    "short": "Цепочка"
+  }
+}

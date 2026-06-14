@@ -8,7 +8,7 @@ import SearchIcon from '@mui/icons-material/Search'
 import Typography from '@mui/material/Typography'
 
 import ModuleCard from './ModuleCard'
-import { itemKey, needByKey, pendingLevels } from '../lib/items'
+import { iconFor, needByKey, pendingLevels } from '../lib/items'
 
 // Окно 1 — список всех модулей. Переключатели: «по уровням / всё сразу»,
 // «ивентовые модули», «2 колонки». Поиск ищет и по названию модуля, и по
@@ -47,7 +47,10 @@ export default function ModulesView({
       }
       const nameMatch = m.name.toLowerCase().includes(q)
       const itemMatch = pendingLevels(m, builtLevels[m.id] || 0).some((l) =>
-        l.items.some((it) => it.name.toLowerCase().includes(q))
+        l.items.some((it) => {
+          const short = (iconFor(it.name).short || '').toLowerCase()
+          return it.name.toLowerCase().includes(q) || short.includes(q)
+        })
       )
       if (nameMatch || itemMatch) list.push({ module: m, nameMatch })
     }
