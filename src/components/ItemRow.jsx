@@ -48,6 +48,14 @@ export default function ItemRow({
     setText(String(n))
   }
 
+  // Состояние загрузки картинки: 'loading' | 'ok' | 'error'. Пока не 'ok' —
+  // показываем заглушку (short/?), чтобы не мелькало чёрным. Сбрасываем при
+  // смене src (строки переиспользуются при сортировке/фильтре).
+  const [imgState, setImgState] = useState('loading')
+  useEffect(() => {
+    setImgState('loading')
+  }, [icon])
+
   return (
     <Box
       sx={{
@@ -68,6 +76,7 @@ export default function ItemRow({
         onClick={() => onSetCount(done ? 0 : need)}
         title="Отметить собранным"
         sx={{
+          position: 'relative',
           width: 40,
           height: 40,
           flexShrink: 0,
@@ -82,15 +91,9 @@ export default function ItemRow({
           cursor: 'pointer',
         }}
       >
-        {icon ? (
-          <Box
-            component="img"
-            src={icon}
-            alt={name}
-            loading="lazy"
-            sx={{ width: '100%', height: '100%', objectFit: 'contain' }}
-          />
-        ) : (
+        {/* Заглушка видна, пока картинка не загрузилась (или её нет/ошибка);
+            картинка ниже накладывается поверх неё абсолютно при загрузке */}
+        {(!icon || imgState !== 'ok') && (
           <Typography
             variant="caption"
             color="text.secondary"
@@ -98,6 +101,26 @@ export default function ItemRow({
           >
             {short || '?'}
           </Typography>
+        )}
+        {icon && imgState !== 'error' && (
+          <Box
+            component="img"
+            src={icon}
+            alt={name}
+            loading="lazy"
+            decoding="async"
+            onLoad={() => setImgState('ok')}
+            onError={() => setImgState('error')}
+            sx={{
+              position: 'absolute',
+              inset: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'contain',
+              opacity: imgState === 'ok' ? 1 : 0,
+              transition: 'opacity 200ms',
+            }}
+          />
         )}
       </Box>
 

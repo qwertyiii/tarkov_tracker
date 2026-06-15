@@ -20,6 +20,16 @@ export function pendingLevels(module, builtLevel) {
   return module.levels.filter((l) => l.level > builtLevel)
 }
 
+// Какие уровни показывать в окне «Модули» в зависимости от режима:
+//   'current'   — только следующий к постройке (builtLevel + 1)
+//   'all'       — все уровни модуля
+//   'remaining' — все непостроенные (по умолчанию)
+export function levelsByMode(module, builtLevel, mode) {
+  if (mode === 'current') return module.levels.filter((l) => l.level === builtLevel + 1)
+  if (mode === 'all') return module.levels
+  return pendingLevels(module, builtLevel)
+}
+
 // Уровень готов к постройке, когда по КАЖДОМУ обязательному предмету
 // (optional !== true) найдено не меньше, чем нужно: count >= qty.
 // Опциональные предметы постройку не блокируют (ТЗ 4.3 / 9.2).

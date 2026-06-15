@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Tabs from '@mui/material/Tabs'
@@ -8,6 +8,7 @@ import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import IconButton from '@mui/material/IconButton'
+import Fab from '@mui/material/Fab'
 import Dialog from '@mui/material/Dialog'
 import DialogTitle from '@mui/material/DialogTitle'
 import DialogContent from '@mui/material/DialogContent'
@@ -18,6 +19,7 @@ import Tooltip from '@mui/material/Tooltip'
 import DownloadIcon from '@mui/icons-material/Download'
 import UploadIcon from '@mui/icons-material/Upload'
 import RestartAltIcon from '@mui/icons-material/RestartAlt'
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 
 import data from './data/data.json'
 import { useStore } from './state/useStore'
@@ -35,6 +37,15 @@ export default function App() {
   const [importError, setImportError] = useState('')
   const [toast, setToast] = useState('')
   const fileRef = useRef(null)
+
+  // Кнопка «наверх»: показываем, когда страница прокручена ниже порога.
+  const [showTop, setShowTop] = useState(false)
+  useEffect(() => {
+    const onScroll = () => setShowTop(window.scrollY > 300)
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   const handleExport = () => {
     const blob = new Blob([store.exportString], { type: 'application/json' })
@@ -109,7 +120,7 @@ export default function App() {
           indicatorColor="primary"
         >
           <Tab label="Модули" />
-          <Tab label="Свод" />
+          <Tab label="Все предметы" />
         </Tabs>
       </AppBar>
 
@@ -130,10 +141,24 @@ export default function App() {
             builtLevels={store.builtLevels}
             collected={store.collected}
             setCount={store.setCount}
+            setBuiltLevel={store.setBuiltLevel}
             showEvent={showEvent}
           />
         )}
       </Container>
+
+      {/* Кнопка «наверх» — на обеих вкладках, появляется при прокрутке */}
+      {showTop && (
+        <Fab
+          color="primary"
+          size="medium"
+          aria-label="Наверх"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          sx={{ position: 'fixed', bottom: 24, right: 24, zIndex: (t) => t.zIndex.tooltip + 1 }}
+        >
+          <KeyboardArrowUpIcon />
+        </Fab>
+      )}
 
       {/* Reset confirmation */}
       <Dialog open={resetOpen} onClose={() => setResetOpen(false)}>

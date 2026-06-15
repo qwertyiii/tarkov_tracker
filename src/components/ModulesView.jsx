@@ -6,6 +6,8 @@ import TextField from '@mui/material/TextField'
 import InputAdornment from '@mui/material/InputAdornment'
 import SearchIcon from '@mui/icons-material/Search'
 import Typography from '@mui/material/Typography'
+import ToggleButton from '@mui/material/ToggleButton'
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup'
 
 import ModuleCard from './ModuleCard'
 import { iconFor, needByKey, pendingLevels } from '../lib/items'
@@ -24,6 +26,8 @@ export default function ModulesView({
 }) {
   const [groupByLevel, setGroupByLevel] = useState(true)
   const [cols2, setCols2] = useState(false)
+  // Режим показа уровней: 'current' | 'remaining' | 'all'
+  const [levelMode, setLevelMode] = useState('remaining')
   const [query, setQuery] = useState('')
   // Раскрытые карточки (по id) при ручном управлении (без поиска).
   const [expandedSet, setExpandedSet] = useState(() => new Set())
@@ -102,6 +106,17 @@ export default function ModulesView({
           control={<Switch checked={cols2} onChange={(e) => setCols2(e.target.checked)} />}
           label="2 колонки"
         />
+        <ToggleButtonGroup
+          size="small"
+          exclusive
+          value={levelMode}
+          onChange={(_, v) => v && setLevelMode(v)}
+          aria-label="Какие уровни показывать"
+        >
+          <ToggleButton value="current">Текущий</ToggleButton>
+          <ToggleButton value="remaining">Оставшиеся</ToggleButton>
+          <ToggleButton value="all">Все уровни</ToggleButton>
+        </ToggleButtonGroup>
         <Box sx={{ flex: 1 }} />
         <TextField
           size="small"
@@ -141,6 +156,7 @@ export default function ModulesView({
                 module={m}
                 builtLevel={built}
                 groupByLevel={groupByLevel}
+                levelMode={levelMode}
                 collected={collected}
                 needMap={needMap}
                 onSetLevel={setBuiltLevel}

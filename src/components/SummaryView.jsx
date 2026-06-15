@@ -7,17 +7,89 @@ import InputAdornment from '@mui/material/InputAdornment'
 import SearchIcon from '@mui/icons-material/Search'
 import FormControlLabel from '@mui/material/FormControlLabel'
 import Switch from '@mui/material/Switch'
+import Chip from '@mui/material/Chip'
+import IconButton from '@mui/material/IconButton'
+import AddIcon from '@mui/icons-material/Add'
+import RemoveIcon from '@mui/icons-material/Remove'
 
 import ItemRow from './ItemRow'
 import { buildSummary, iconFor, sortByCollected } from '../lib/items'
 
+// Панель справа: все модули со степперами −/+ уровня. Построил уровень →
+// его предметы сами уходят из списка слева (buildSummary считается от builtLevels).
+function ModulesPanel({ modules, builtLevels, showEvent, setBuiltLevel }) {
+  const rows = useMemo(() => {
+    const list = modules.filter((m) => !m.isEvent || showEvent)
+    // Полностью построенные — вниз.
+    return [...list].sort((a, b) => {
+      const da = (builtLevels[a.id] || 0) >= a.maxLevel ? 1 : 0
+      const db = (builtLevels[b.id] || 0) >= b.maxLevel ? 1 : 0
+      return da - db
+    })
+  }, [modules, builtLevels, showEvent])
+
+  return (
+    <Paper sx={{ p: 1.5 }}>
+      <Typography variant="overline" sx={{ color: 'primary.main', display: 'block', mb: 0.5 }}>
+        Модули
+      </Typography>
+      {rows.map((m) => {
+        const built = builtLevels[m.id] || 0
+        const atMax = built >= m.maxLevel
+        return (
+          <Box
+            key={m.id}
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 0.5,
+              py: 0.5,
+              borderBottom: '1px solid',
+              borderColor: 'divider',
+              opacity: atMax ? 0.5 : 1,
+            }}
+          >
+            <Typography variant="body2" sx={{ flex: 1, minWidth: 0 }} noWrap title={m.name}>
+              {m.name}
+            </Typography>
+            <Chip
+              label={`${built} / ${m.maxLevel}`}
+              size="small"
+              variant="outlined"
+              sx={{ height: 22, fontFamily: '"JetBrains Mono", monospace' }}
+            />
+            <IconButton
+              size="small"
+              aria-label={`Понизить уровень ${m.name}`}
+              disabled={built <= 0}
+              onClick={() => setBuiltLevel(m.id, Math.max(0, built - 1))}
+            >
+              <RemoveIcon fontSize="inherit" />
+            </IconButton>
+            <IconButton
+              size="small"
+              aria-label={`Повысить уровень ${m.name}`}
+              disabled={atMax}
+              onClick={() => setBuiltLevel(m.id, Math.min(m.maxLevel, built + 1))}
+            >
+              <AddIcon fontSize="inherit" />
+            </IconButton>
+          </Box>
+        )
+      })}
+    </Paper>
+  )
+}
+
 // Окно 2 — единый список всех предметов по убежищу, сгруппированный по itemKey
-// (ТЗ 6). Со счётчиком found/need, поиском, «скрыть собранные» и «2 колонки».
+// (ТЗ 6). Слева список со счётчиком found/need, поиском, «скрыть собранные» и
+// «2 колонки»; справа панель модулей со степперами уровня.
 export default function SummaryView({
   modules,
   builtLevels,
   collected,
   setCount,
+  setBuiltLevel,
   showEvent,
 }) {
   const [query, setQuery] = useState('')
@@ -68,7 +140,9 @@ export default function SummaryView({
   }
 
   return (
-    <Box>
+    <Box sx={{ display: 'flex', gap: 2, flexDirection: { xs: 'column', md: 'row' } }}>
+      {/* Левая часть — список предметов со всеми переключателями */}
+      <Box sx={{ flex: 1, minWidth: 0 }}>
       <Box sx={{ display: 'flex', gap: 2, alignItems: 'center', flexWrap: 'wrap', mb: 2 }}>
         <Typography variant="body2" color="text.secondary">
           Собрано <b style={{ color: '#c7a26b' }}>{done}</b> из {total} позиций
@@ -126,6 +200,25 @@ export default function SummaryView({
         // 1 колонка — единый список в одной карточке
         <Paper>{filtered.map(renderRow)}</Paper>
       )}
+      </Box>
+
+      {/* Правая часть — панель модулей со степперами уровня */}
+      <Box
+        sx={{
+          width: { xs: '100%', md: 300 },
+          flexShrink: 0,
+          alignSelf: 'flex-start',
+          position: { md: 'sticky' },
+          top: { md: 16 },
+        }}
+      >
+        <ModulesPanel
+          modules={modules}
+          builtLevels={builtLevels}
+          showEvent={showEvent}
+          setBuiltLevel={setBuiltLevel}
+        />
+      </Box>
     </Box>
   )
 }

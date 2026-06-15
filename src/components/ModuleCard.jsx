@@ -15,7 +15,14 @@ import ConstructionIcon from '@mui/icons-material/Construction'
 
 import ItemRow from './ItemRow'
 import Conditions from './Conditions'
-import { iconFor, isLevelReady, itemKey, pendingLevels, sortByCollected } from '../lib/items'
+import {
+  iconFor,
+  isLevelReady,
+  itemKey,
+  levelsByMode,
+  pendingLevels,
+  sortByCollected,
+} from '../lib/items'
 
 // Список предметов одного уровня (или объединённый). Сортировка: «не готово для
 // этого уровня» вверх, «готово» (found >= qty этой строки) вниз. need берётся
@@ -53,7 +60,9 @@ function LevelItems({ items, collected, needMap, onSetCount, itemQuery }) {
             icon={meta.icon}
             short={meta.short}
             lineQty={it.qty}
-            need={needMap.get(it.key) ?? it.qty}
+            // через ||, чтобы 0 (уже построенные уровни в режиме 'all') падал
+            // в it.qty и не давал деления на ноль в счётчике
+            need={needMap.get(it.key) || it.qty}
             found={collected[it.key] || 0}
             onSetCount={(n) => onSetCount(it.key, n)}
           />
@@ -67,6 +76,7 @@ export default function ModuleCard({
   module,
   builtLevel,
   groupByLevel,
+  levelMode,
   collected,
   needMap,
   onSetLevel,
@@ -76,7 +86,10 @@ export default function ModuleCard({
   itemQuery,
   dim,
 }) {
+  // pending — реально оставшаяся работа (для шапки и кнопки постройки).
   const pending = pendingLevels(module, builtLevel)
+  // shownLevels — что показываем в списке согласно выбранному режиму.
+  const shownLevels = levelsByMode(module, builtLevel, levelMode)
   const atMax = builtLevel >= module.maxLevel
 
   // Целевой уровень = следующий к постройке. Его готовность включает кнопку.
@@ -92,9 +105,12 @@ export default function ModuleCard({
     return n
   }, [pending, collected])
 
-  // «Всё сразу» — объединяем предметы и условия всех непостроенных уровней.
-  const mergedItems = useMemo(() => pending.flatMap((l) => l.items), [pending])
-  const mergedConditions = useMemo(() => pending.flatMap((l) => l.conditions), [pending])
+  // «Всё сразу» — объединяем предметы и условия показываемых уровней.
+  const mergedItems = useMemo(() => shownLevels.flatMap((l) => l.items), [shownLevels])
+  const mergedConditions = useMemo(
+    () => shownLevels.flatMap((l) => l.conditions),
+    [shownLevels]
+  )
 
   return (
     <Accordion
@@ -163,13 +179,13 @@ export default function ModuleCard({
           )}
         </Box>
 
-        {pending.length === 0 ? (
+        {shownLevels.length === 0 ? (
           <Typography variant="body2" color="text.secondary" sx={{ fontStyle: 'italic' }}>
-            Всё построено — собирать нечего.
+            {atMax ? 'Всё построено — собирать нечего.' : 'Показывать нечего.'}
           </Typography>
         ) : groupByLevel ? (
           // «По уровням»
-          pending.map((level) => (
+          shownLevels.map((level) => (
             <Box key={level.level} sx={{ mb: 2 }}>
               <Typography
                 variant="subtitle2"
