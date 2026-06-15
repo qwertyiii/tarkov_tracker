@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "build:data": "python scripts/build_data.py",
-    "build:icons": "python scripts/build_icons.py"
+    "build:icons": "python scripts/build_icons.py",
+    "build:kappa": "python scripts/build_kappa.py"
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",

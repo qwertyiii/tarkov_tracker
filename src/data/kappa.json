@@ -1,0 +1,248 @@
+[
+  {
+    "id": "69f9d547b98cc4120608692a",
+    "name": "CD-диск DesmondPilak",
+    "short": "Desmond",
+    "icon": "https://assets.tarkov.dev/69f9d547b98cc4120608692a-icon.webp"
+  },
+  {
+    "id": "5bc9c1e2d4351e00367fbcf0",
+    "name": "Антикварный топор",
+    "short": "Топор",
+    "icon": "https://assets.tarkov.dev/5bc9c1e2d4351e00367fbcf0-icon.webp"
+  },
+  {
+    "id": "69398e94ca94fd2877039504",
+    "name": "Балаклава \"Nut Sack\"",
+    "short": "Nutsack",
+    "icon": "https://assets.tarkov.dev/69398e94ca94fd2877039504-icon.webp"
+  },
+  {
+    "id": "5fd8d28367cb5e077335170f",
+    "name": "Балаклава Smoke",
+    "short": "Smoke",
+    "icon": "https://assets.tarkov.dev/5fd8d28367cb5e077335170f-icon.webp"
+  },
+  {
+    "id": "60b0f93284c20f0feb453da7",
+    "name": "Банка газировки RatCola",
+    "short": "RatCola",
+    "icon": "https://assets.tarkov.dev/60b0f93284c20f0feb453da7-icon.webp"
+  },
+  {
+    "id": "5e54f6af86f7742199090bf3",
+    "name": "Банка зернового кофе Dr. Lupo's",
+    "short": "DrLupo's",
+    "icon": "https://assets.tarkov.dev/5e54f6af86f7742199090bf3-icon.webp"
+  },
+  {
+    "id": "62a09d79de7ac81993580530",
+    "name": "Бронежилет DRD Body Armor",
+    "short": "DRD",
+    "icon": "https://assets.tarkov.dev/62a09d79de7ac81993580530-icon.webp"
+  },
+  {
+    "id": "60b0f6c058e0b0481a09ad11",
+    "name": "Бумажник WZ",
+    "short": "WZ",
+    "icon": "https://assets.tarkov.dev/60b0f6c058e0b0481a09ad11-icon.webp"
+  },
+  {
+    "id": "62a09e974f842e1bd12da3f0",
+    "name": "Видеокассета с фильмом \"Киборг-убийца\" из проката \"Проходимец\"",
+    "short": "VHS",
+    "icon": "https://assets.tarkov.dev/62a09e974f842e1bd12da3f0-icon.webp"
+  },
+  {
+    "id": "66b37f114410565a8f6789e2",
+    "name": "Газовый трубный разводной ключ Inseq",
+    "short": "Inseq",
+    "icon": "https://assets.tarkov.dev/66b37f114410565a8f6789e2-icon.webp"
+  },
+  {
+    "id": "5f745ee30acaeb0d490d8c5b",
+    "name": "Гитарный медиатор Veritas",
+    "short": "Veritas",
+    "icon": "https://assets.tarkov.dev/5f745ee30acaeb0d490d8c5b-icon.webp"
+  },
+  {
+    "id": "69f9d60b5de6674f08060f2a",
+    "name": "Дискета Dunduk",
+    "short": "Dunduk",
+    "icon": "https://assets.tarkov.dev/69f9d60b5de6674f08060f2a-icon.webp"
+  },
+  {
+    "id": "6937edb912d456a817083e82",
+    "name": "Золотая гантель Mazoni",
+    "short": "Mazoni",
+    "icon": "https://assets.tarkov.dev/6937edb912d456a817083e82-icon.webp"
+  },
+  {
+    "id": "62a09cfe4f842e1bd12da3e4",
+    "name": "Золотое яйцо",
+    "short": "Яйцо",
+    "icon": "https://assets.tarkov.dev/62a09cfe4f842e1bd12da3e4-icon.webp"
+  },
+  {
+    "id": "5bc9b720d4351e450201234b",
+    "name": "Золотой смартфон 1GPhone",
+    "short": "1GPhone",
+    "icon": "https://assets.tarkov.dev/5bc9b720d4351e450201234b-icon.webp"
+  },
+  {
+    "id": "62a09ec84f842e1bd12da3f2",
+    "name": "Ключ от погрузчика Missam",
+    "short": "Danex",
+    "icon": "https://assets.tarkov.dev/62a09ec84f842e1bd12da3f2-icon.webp"
+  },
+  {
+    "id": "62a09d3bcf4a99369e262447",
+    "name": "Ключница Gingy",
+    "short": "Gingy",
+    "icon": "https://assets.tarkov.dev/62a09d3bcf4a99369e262447-icon.webp"
+  },
+  {
+    "id": "62a09e73af34e73a266d932a",
+    "name": "Книга рецептов BakeEzy",
+    "short": "BakeEzy",
+    "icon": "https://assets.tarkov.dev/62a09e73af34e73a266d932a-icon.webp"
+  },
+  {
+    "id": "69f9d319c906cd16da03b374",
+    "name": "Копилка SheefGG",
+    "short": "SheefGG",
+    "icon": "https://assets.tarkov.dev/69f9d319c906cd16da03b374-icon.webp"
+  },
+  {
+    "id": "5bc9be8fd4351e00334cae6e",
+    "name": "Коробка с чаем 42 Signature Blend English Tea",
+    "short": "42",
+    "icon": "https://assets.tarkov.dev/5bc9be8fd4351e00334cae6e-icon.webp"
+  },
+  {
+    "id": "66b37eb4acff495a29492407",
+    "name": "Кроссовка бренда Viibiin",
+    "short": "Viibiin",
+    "icon": "https://assets.tarkov.dev/66b37eb4acff495a29492407-icon.webp"
+  },
+  {
+    "id": "60b0f561c4449e4cb624c1d7",
+    "name": "Крысиный яд LVNDMARK's",
+    "short": "Яд",
+    "icon": "https://assets.tarkov.dev/60b0f561c4449e4cb624c1d7-icon.webp"
+  },
+  {
+    "id": "62a09e08de7ac81993580532",
+    "name": "Легкая армированная маска Glorious E",
+    "short": "Glorious",
+    "icon": "https://assets.tarkov.dev/62a09e08de7ac81993580532-icon.webp"
+  },
+  {
+    "id": "5e54f79686f7744022011103",
+    "name": "Маска Pestily",
+    "short": "Маска",
+    "icon": "https://assets.tarkov.dev/5e54f79686f7744022011103-icon.webp"
+  },
+  {
+    "id": "5bc9b9ecd4351e3bac122519",
+    "name": "Масло для бороды Deadlyslob's",
+    "short": "Масло",
+    "icon": "https://assets.tarkov.dev/5bc9b9ecd4351e3bac122519-icon.webp"
+  },
+  {
+    "id": "62a08f4c4f842e1bd12d9d62",
+    "name": "Мягкая игрушка BEAR Buddy",
+    "short": "BEAR Buddy",
+    "icon": "https://assets.tarkov.dev/62a08f4c4f842e1bd12d9d62-icon.webp"
+  },
+  {
+    "id": "5bd073a586f7747e6f135799",
+    "name": "Накладные усы",
+    "short": "Усы",
+    "icon": "https://assets.tarkov.dev/5bd073a586f7747e6f135799-icon.webp"
+  },
+  {
+    "id": "5bc9b355d4351e6d1509862a",
+    "name": "Оружейная смазка #FireKlean",
+    "short": "#FireKlean",
+    "icon": "https://assets.tarkov.dev/5bc9b355d4351e6d1509862a-icon.webp"
+  },
+  {
+    "id": "62a09e410b9d3c46de5b6e78",
+    "name": "Очки JohnB \"Liquid DNB\"",
+    "short": "JohnB",
+    "icon": "https://assets.tarkov.dev/62a09e410b9d3c46de5b6e78-icon.webp"
+  },
+  {
+    "id": "60b0f7057897d47c5b04ab94",
+    "name": "Плюшевая игрушка Loot Lord",
+    "short": "Loot Lord",
+    "icon": "https://assets.tarkov.dev/60b0f7057897d47c5b04ab94-icon.webp"
+  },
+  {
+    "id": "60b0f988c4449e4cb624c1da",
+    "name": "Повязка на плечо Evasion",
+    "short": "Evasion",
+    "icon": "https://assets.tarkov.dev/60b0f988c4449e4cb624c1da-icon.webp"
+  },
+  {
+    "id": "5e54f76986f7740366043752",
+    "name": "Полумаска Shroud",
+    "short": "Shroud",
+    "icon": "https://assets.tarkov.dev/5e54f76986f7740366043752-icon.webp"
+  },
+  {
+    "id": "5bc9c049d4351e44f824d360",
+    "name": "Потрепанная антикварная книга",
+    "short": "Книга",
+    "icon": "https://assets.tarkov.dev/5bc9c049d4351e44f824d360-icon.webp"
+  },
+  {
+    "id": "62a09cb7a04c0c5c6e0a84f8",
+    "name": "Пропуск для прессы (выписан на NoiceGuy)",
+    "short": "Пропуск",
+    "icon": "https://assets.tarkov.dev/62a09cb7a04c0c5c6e0a84f8-icon.webp"
+  },
+  {
+    "id": "66b37ea4c5d72b0277488439",
+    "name": "Реплика ножа кунай Tamatthi",
+    "short": "Tamatthi",
+    "icon": "https://assets.tarkov.dev/66b37ea4c5d72b0277488439-icon.webp"
+  },
+  {
+    "id": "62a09dd4621468534a797ac7",
+    "name": "Рыжая накладная борода Baddie",
+    "short": "Baddie",
+    "icon": "https://assets.tarkov.dev/62a09dd4621468534a797ac7-icon.webp"
+  },
+  {
+    "id": "5bc9bdb8d4351e003562b8a1",
+    "name": "Серебряный жетон",
+    "short": "Жетон",
+    "icon": "https://assets.tarkov.dev/5bc9bdb8d4351e003562b8a1-icon.webp"
+  },
+  {
+    "id": "5e54f62086f774219b0f1937",
+    "name": "Статуэтка ворона",
+    "short": "Ворон",
+    "icon": "https://assets.tarkov.dev/5e54f62086f774219b0f1937-icon.webp"
+  },
+  {
+    "id": "62a091170b9d3c46de5b6cf2",
+    "name": "Статуэтка попугая Axel",
+    "short": "Axel",
+    "icon": "https://assets.tarkov.dev/62a091170b9d3c46de5b6cf2-icon.webp"
+  },
+  {
+    "id": "6937f02dfd6488bb27024839",
+    "name": "Ушанка Домонтовича",
+    "short": "Домонтович",
+    "icon": "https://assets.tarkov.dev/6937f02dfd6488bb27024839-icon.webp"
+  },
+  {
+    "id": "6937ecf8628ee476240c07cb",
+    "name": "Шина Tigzresq",
+    "short": "Tigzresq",
+    "icon": "https://assets.tarkov.dev/6937ecf8628ee476240c07cb-icon.webp"
+  }
+]

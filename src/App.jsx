@@ -22,9 +22,11 @@ import RestartAltIcon from '@mui/icons-material/RestartAlt'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 
 import data from './data/data.json'
+import kappa from './data/kappa.json'
 import { useStore } from './state/useStore'
 import ModulesView from './components/ModulesView'
 import SummaryView from './components/SummaryView'
+import KappaView from './components/KappaView'
 
 export default function App() {
   const store = useStore()
@@ -121,11 +123,12 @@ export default function App() {
         >
           <Tab label="Модули" />
           <Tab label="Все предметы" />
+          <Tab label="Каппа" />
         </Tabs>
       </AppBar>
 
       <Container maxWidth="lg" sx={{ mt: 3 }}>
-        {tab === 0 ? (
+        {tab === 0 && (
           <ModulesView
             modules={data.modules}
             builtLevels={store.builtLevels}
@@ -137,7 +140,8 @@ export default function App() {
             showEvent={showEvent}
             onShowEventChange={setShowEvent}
           />
-        ) : (
+        )}
+        {tab === 1 && (
           <SummaryView
             modules={data.modules}
             builtLevels={store.builtLevels}
@@ -147,6 +151,9 @@ export default function App() {
             onNotify={setToast}
             showEvent={showEvent}
           />
+        )}
+        {tab === 2 && (
+          <KappaView items={kappa} found={store.kappaFound} onToggle={store.toggleKappa} />
         )}
       </Container>
 

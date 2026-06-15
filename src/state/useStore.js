@@ -6,7 +6,7 @@ import { lineKey } from '../lib/items'
 // несовместима с v2 — прогресс разово обнулится (новый ключ = чистый старт).
 const STORAGE_KEY = 'tarkov-hideout-v3'
 
-const EMPTY_STATE = { builtLevels: {}, collected: {} }
+const EMPTY_STATE = { builtLevels: {}, collected: {}, kappaFound: {} }
 
 function loadState() {
   try {
@@ -21,6 +21,11 @@ function loadState() {
       collected:
         parsed && typeof parsed.collected === 'object' && parsed.collected
           ? parsed.collected
+          : {},
+      // Аддитивное поле: у старых сохранёнок его нет — безопасный дефолт {}.
+      kappaFound:
+        parsed && typeof parsed.kappaFound === 'object' && parsed.kappaFound
+          ? parsed.kappaFound
           : {},
     }
   } catch {
@@ -91,8 +96,18 @@ export function useStore() {
     })
   }, [])
 
+  // Каппа — отдельная бинарная отметка предмета по id (true ↔ удалить).
+  const toggleKappa = useCallback((id) => {
+    setState((s) => {
+      const next = { ...s.kappaFound }
+      if (next[id]) delete next[id]
+      else next[id] = true
+      return { ...s, kappaFound: next }
+    })
+  }, [])
+
   const reset = useCallback(() => {
-    setState({ builtLevels: {}, collected: {} })
+    setState({ builtLevels: {}, collected: {}, kappaFound: {} })
   }, [])
 
   const importState = useCallback((obj) => {
@@ -105,6 +120,10 @@ export function useStore() {
         obj && typeof obj.collected === 'object' && obj.collected
           ? obj.collected
           : {},
+      kappaFound:
+        obj && typeof obj.kappaFound === 'object' && obj.kappaFound
+          ? obj.kappaFound
+          : {},
     })
   }, [])
 
@@ -116,9 +135,11 @@ export function useStore() {
   return {
     builtLevels: state.builtLevels,
     collected: state.collected,
+    kappaFound: state.kappaFound,
     setBuiltLevel,
     setCount,
     setCounts,
+    toggleKappa,
     reset,
     importState,
     exportString,
