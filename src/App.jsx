@@ -153,7 +153,12 @@ export default function App() {
           />
         )}
         {tab === 2 && (
-          <KappaView items={kappa} found={store.kappaFound} onToggle={store.toggleKappa} />
+          <KappaView
+            items={kappa}
+            found={store.kappaFound}
+            onToggle={store.toggleKappa}
+            onReset={store.resetKappa}
+          />
         )}
       </Container>
 

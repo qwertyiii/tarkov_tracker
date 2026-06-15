@@ -9,11 +9,15 @@ import FormControlLabel from '@mui/material/FormControlLabel'
 import Switch from '@mui/material/Switch'
 import Chip from '@mui/material/Chip'
 import IconButton from '@mui/material/IconButton'
+import ToggleButton from '@mui/material/ToggleButton'
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup'
+import Select from '@mui/material/Select'
+import MenuItem from '@mui/material/MenuItem'
 import AddIcon from '@mui/icons-material/Add'
 import RemoveIcon from '@mui/icons-material/Remove'
 
 import ItemRow from './ItemRow'
-import { buildSummary, distributeCount, iconFor, sortByCollected } from '../lib/items'
+import { buildSummary, distributeCount, iconFor, moduleIconFor } from '../lib/items'
 
 // Панель справа: все модули со степперами −/+ уровня. Построил уровень →
 // его предметы сами уходят из списка слева (buildSummary считается от builtLevels).
@@ -49,6 +53,17 @@ function ModulesPanel({ modules, builtLevels, showEvent, setBuiltLevel }) {
               opacity: atMax ? 0.5 : 1,
             }}
           >
+            {moduleIconFor(m.id) && (
+              <Box
+                component="img"
+                src={moduleIconFor(m.id)}
+                alt=""
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none'
+                }}
+                sx={{ width: 20, height: 20, objectFit: 'contain', flexShrink: 0 }}
+              />
+            )}
             <Typography variant="body2" sx={{ flex: 1, minWidth: 0 }} noWrap title={m.name}>
               {m.name}
             </Typography>
@@ -96,6 +111,8 @@ export default function SummaryView({
   const [query, setQuery] = useState('')
   const [hideCollected, setHideCollected] = useState(false)
   const [cols2, setCols2] = useState(false)
+  const [firFilter, setFirFilter] = useState('all') // 'all' | 'fir' | 'std'
+  const [sortBy, setSortBy] = useState('name') // 'name' | 'qty' | 'remaining'
 
   // Свод теперь по всем уровням и зависит от collected (found/builtQty/lines).
   const groups = useMemo(
@@ -114,9 +131,23 @@ export default function SummaryView({
         const short = (iconFor(g.name).short || '').toLowerCase()
         return g.name.toLowerCase().includes(q) || short.includes(q)
       })
+    if (firFilter === 'fir') rows = rows.filter((g) => g.fir)
+    else if (firFilter === 'std') rows = rows.filter((g) => !g.fir)
     if (hideCollected) rows = rows.filter((g) => !isDone(g))
-    return sortByCollected(rows, isDone)
-  }, [groups, query, hideCollected])
+    // Сортировка по выбранному критерию; собранные всё равно уходят вниз.
+    const cmp = {
+      name: (a, b) => a.name.localeCompare(b.name),
+      qty: (a, b) => b.totalQty - a.totalQty,
+      remaining: (a, b) => b.totalQty - b.found - (a.totalQty - a.found),
+    }[sortBy]
+    rows = [...rows].sort((a, b) => {
+      const da = isDone(a) ? 1 : 0
+      const db = isDone(b) ? 1 : 0
+      if (da !== db) return da - db
+      return cmp(a, b)
+    })
+    return rows
+  }, [groups, query, hideCollected, firFilter, sortBy])
 
   const total = groups.length
   const done = groups.filter(isDone).length
@@ -154,7 +185,27 @@ export default function SummaryView({
         <Typography variant="body2" color="text.secondary">
           Собрано <b style={{ color: '#c7a26b' }}>{done}</b> из {total} позиций
         </Typography>
-        <Box sx={{ flex: 1 }} />
+        <ToggleButtonGroup
+          size="small"
+          exclusive
+          value={firFilter}
+          onChange={(_, v) => v && setFirFilter(v)}
+          aria-label="Фильтр FIR"
+        >
+          <ToggleButton value="all">Все</ToggleButton>
+          <ToggleButton value="fir">FIR</ToggleButton>
+          <ToggleButton value="std">Обычные</ToggleButton>
+        </ToggleButtonGroup>
+        <Select
+          size="small"
+          value={sortBy}
+          onChange={(e) => setSortBy(e.target.value)}
+          aria-label="Сортировка"
+        >
+          <MenuItem value="name">По имени</MenuItem>
+          <MenuItem value="qty">По количеству</MenuItem>
+          <MenuItem value="remaining">По остатку</MenuItem>
+        </Select>
         <FormControlLabel
           control={<Switch checked={cols2} onChange={(e) => setCols2(e.target.checked)} />}
           label="2 колонки"
@@ -177,7 +228,7 @@ export default function SummaryView({
               </InputAdornment>
             ),
           }}
-          sx={{ minWidth: 220 }}
+          sx={{ flexGrow: 1, minWidth: 220 }}
         />
       </Box>
 

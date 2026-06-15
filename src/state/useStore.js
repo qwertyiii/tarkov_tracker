@@ -106,6 +106,11 @@ export function useStore() {
     })
   }, [])
 
+  // Сброс только отметок Каппы (прогресс убежища не трогаем).
+  const resetKappa = useCallback(() => {
+    setState((s) => ({ ...s, kappaFound: {} }))
+  }, [])
+
   const reset = useCallback(() => {
     setState({ builtLevels: {}, collected: {}, kappaFound: {} })
   }, [])
@@ -140,6 +145,7 @@ export function useStore() {
     setCount,
     setCounts,
     toggleKappa,
+    resetKappa,
     reset,
     importState,
     exportString,

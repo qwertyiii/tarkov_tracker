@@ -2,11 +2,17 @@
 // static data + user state (builtLevels, collected). Nothing here touches
 // storage or React.
 import icons from '../data/icons.json'
+import moduleIcons from '../data/module_icons.json'
 
 // Иконка и короткое имя предмета по точному названию из icons.json.
 // Если предмета нет — возвращает пустой объект (без ошибок).
 export function iconFor(name) {
   return icons[name] || {}
+}
+
+// Иконка станции модуля по его id. Нет — пустая строка (без ошибок).
+export function moduleIconFor(moduleId) {
+  return moduleIcons[moduleId] || ''
 }
 
 // Key of a collectible item = name + FIR class. FIR and non-FIR versions of the

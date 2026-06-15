@@ -30,6 +30,8 @@ export default function ModulesView({
   const [cols2, setCols2] = useState(false)
   // Режим показа уровней: 'current' | 'remaining' | 'all'
   const [levelMode, setLevelMode] = useState('remaining')
+  // Фильтр FIR: 'all' | 'fir' | 'std'
+  const [firFilter, setFirFilter] = useState('all')
   const [query, setQuery] = useState('')
   // Раскрытые карточки (по id) при ручном управлении (без поиска).
   const [expandedSet, setExpandedSet] = useState(() => new Set())
@@ -113,7 +115,17 @@ export default function ModulesView({
           <ToggleButton value="remaining">Оставшиеся</ToggleButton>
           <ToggleButton value="all">Все уровни</ToggleButton>
         </ToggleButtonGroup>
-        <Box sx={{ flex: 1 }} />
+        <ToggleButtonGroup
+          size="small"
+          exclusive
+          value={firFilter}
+          onChange={(_, v) => v && setFirFilter(v)}
+          aria-label="Фильтр FIR"
+        >
+          <ToggleButton value="all">Все</ToggleButton>
+          <ToggleButton value="fir">FIR</ToggleButton>
+          <ToggleButton value="std">Обычные</ToggleButton>
+        </ToggleButtonGroup>
         <TextField
           size="small"
           placeholder="Поиск модуля или предмета…"
@@ -126,7 +138,7 @@ export default function ModulesView({
               </InputAdornment>
             ),
           }}
-          sx={{ minWidth: 260 }}
+          sx={{ flexGrow: 1, minWidth: 220 }}
         />
       </Box>
 
@@ -153,6 +165,7 @@ export default function ModulesView({
                 builtLevel={built}
                 groupByLevel={groupByLevel}
                 levelMode={levelMode}
+                firFilter={firFilter}
                 collected={collected}
                 onSetLevel={setBuiltLevel}
                 setCount={setCount}

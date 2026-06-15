@@ -22,6 +22,7 @@ import {
   itemKey,
   levelsByMode,
   lineKey,
+  moduleIconFor,
   pendingLevels,
   sortByCollected,
 } from '../lib/items'
@@ -29,7 +30,7 @@ import {
 // Рисует готовые строки-дескрипторы: фильтрует по поиску, сортирует (готовые
 // вниз) и отдаёт в ItemRow. Дескриптор уже несёт need/found/minCount/locked и
 // колбэки — логику счёта формирует ModuleCard под конкретный режим.
-function ItemList({ rows, itemQuery }) {
+function ItemList({ rows, itemQuery, firFilter }) {
   const sorted = useMemo(() => {
     const q = (itemQuery || '').trim().toLowerCase()
     let rs = rows
@@ -38,8 +39,10 @@ function ItemList({ rows, itemQuery }) {
         const short = (iconFor(r.name).short || '').toLowerCase()
         return r.name.toLowerCase().includes(q) || short.includes(q)
       })
+    if (firFilter === 'fir') rs = rs.filter((r) => r.fir)
+    else if (firFilter === 'std') rs = rs.filter((r) => !r.fir)
     return sortByCollected(rs, (r) => r.found >= r.need)
-  }, [rows, itemQuery])
+  }, [rows, itemQuery, firFilter])
 
   if (sorted.length === 0) {
     return (
@@ -139,6 +142,7 @@ export default function ModuleCard({
   builtLevel,
   groupByLevel,
   levelMode,
+  firFilter,
   collected,
   onSetLevel,
   setCount,
@@ -190,6 +194,17 @@ export default function ModuleCard({
     >
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, flexWrap: 'wrap', flex: 1, pr: 1 }}>
+          {moduleIconFor(module.id) && (
+            <Box
+              component="img"
+              src={moduleIconFor(module.id)}
+              alt=""
+              onError={(e) => {
+                e.currentTarget.style.display = 'none'
+              }}
+              sx={{ width: 26, height: 26, objectFit: 'contain', flexShrink: 0 }}
+            />
+          )}
           <Typography sx={{ fontWeight: 600, flexShrink: 0 }}>{module.name}</Typography>
           {module.isEvent && (
             <Chip label="ивент" size="small" color="primary" variant="outlined" sx={{ height: 20 }} />
@@ -277,6 +292,7 @@ export default function ModuleCard({
               <ItemList
                 rows={rowsForLevel(module, level, builtLevel, collected, setCount)}
                 itemQuery={itemQuery}
+                firFilter={firFilter}
               />
               {!itemQuery && <Conditions conditions={level.conditions} />}
             </Box>
@@ -284,7 +300,7 @@ export default function ModuleCard({
         ) : (
           // «Всё сразу» — один ряд на предмет, знаменатель = сумма по модулю
           <Box>
-            <ItemList rows={mergedRows} itemQuery={itemQuery} />
+            <ItemList rows={mergedRows} itemQuery={itemQuery} firFilter={firFilter} />
             {!itemQuery && <Conditions conditions={mergedConditions} />}
           </Box>
         )}

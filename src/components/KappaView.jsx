@@ -2,7 +2,13 @@ import { useMemo, useState } from 'react'
 import Box from '@mui/material/Box'
 import Paper from '@mui/material/Paper'
 import Typography from '@mui/material/Typography'
+import Button from '@mui/material/Button'
+import Dialog from '@mui/material/Dialog'
+import DialogTitle from '@mui/material/DialogTitle'
+import DialogContent from '@mui/material/DialogContent'
+import DialogActions from '@mui/material/DialogActions'
 import CheckCircleIcon from '@mui/icons-material/CheckCircle'
+import RestartAltIcon from '@mui/icons-material/RestartAlt'
 
 // Карточка одного предмета Каппы: крупная иконка + подпись. Клик = отметить.
 // Загрузка картинки с заглушкой (как в ItemRow), чтобы не мелькало чёрным.
@@ -102,7 +108,9 @@ function KappaCard({ item, found, onToggle }) {
 
 // Окно «Каппа» — предметы квеста «Коллекционер». Бинарная отметка (по 1 шт.).
 // Найденные уезжают вниз, но остаются видимыми.
-export default function KappaView({ items, found, onToggle }) {
+export default function KappaView({ items, found, onToggle, onReset }) {
+  const [resetOpen, setResetOpen] = useState(false)
+
   const sorted = useMemo(() => {
     return [...items].sort((a, b) => {
       const fa = found[a.id] ? 1 : 0
@@ -117,11 +125,45 @@ export default function KappaView({ items, found, onToggle }) {
 
   return (
     <Box>
-      <Box sx={{ mb: 2 }}>
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, flexWrap: 'wrap', mb: 2 }}>
         <Typography variant="body2" color="text.secondary">
           Собрано <b style={{ color: '#c7a26b' }}>{done}</b> из {total} предметов
         </Typography>
+        <Box sx={{ flex: 1 }} />
+        <Button
+          color="error"
+          size="small"
+          startIcon={<RestartAltIcon />}
+          onClick={() => setResetOpen(true)}
+          disabled={done === 0}
+        >
+          Сбросить Каппу
+        </Button>
       </Box>
+
+      {/* Подтверждение сброса — чистит ТОЛЬКО Каппу */}
+      <Dialog open={resetOpen} onClose={() => setResetOpen(false)}>
+        <DialogTitle>Сбросить отметки Каппы?</DialogTitle>
+        <DialogContent>
+          <Typography>
+            Будут сняты все отметки найденных предметов Каппы. Прогресс убежища
+            не затрагивается.
+          </Typography>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setResetOpen(false)}>Отмена</Button>
+          <Button
+            color="error"
+            variant="contained"
+            onClick={() => {
+              onReset()
+              setResetOpen(false)
+            }}
+          >
+            Сбросить
+          </Button>
+        </DialogActions>
+      </Dialog>
 
       {total === 0 ? (
         <Paper>
