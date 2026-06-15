@@ -17,6 +17,8 @@ import re
 import sys
 import urllib.request
 
+from dl_icon import localize
+
 API = "https://api.tarkov.dev/graphql"
 QUERY = "{ hideoutStations(lang: ru) { name normalizedName imageLink } }"
 
@@ -97,8 +99,10 @@ def main():
     unmatched = []
     for mid, name in modules:
         img = by_norm.get(normalize(name))
-        if img:
-            result[mid] = img
+        # Скачиваем иконку к себе в public/icons и пишем локальный путь.
+        local = localize(img) if img else ""
+        if local:
+            result[mid] = local
         else:
             unmatched.append(f"{mid}\t{name}")
 

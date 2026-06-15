@@ -16,6 +16,8 @@ import os
 import sys
 import urllib.request
 
+from dl_icon import localize
+
 API = "https://api.tarkov.dev/graphql"
 QUERY = """
 {
@@ -103,7 +105,8 @@ def main():
                 "id": iid,
                 "name": (item.get("name") or "").strip(),
                 "short": (item.get("shortName") or "").strip(),
-                "icon": item.get("iconLink") or item.get("gridImageLink") or "",
+                # Скачиваем иконку к себе в public/icons и пишем локальный путь.
+                "icon": localize(item.get("iconLink") or item.get("gridImageLink") or ""),
             }
         )
 

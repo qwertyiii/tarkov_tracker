@@ -20,6 +20,8 @@ import re
 import sys
 import urllib.request
 
+from dl_icon import localize
+
 API = "https://api.tarkov.dev/graphql"
 QUERY = "{ items(lang: ru) { name shortName iconLink gridImageLink } }"
 
@@ -104,7 +106,12 @@ def main():
     for name in sorted(wanted):
         hit = by_norm.get(normalize(name))
         if hit and hit.get("icon"):
-            result[name] = {"icon": hit["icon"], "short": hit.get("short", "")}
+            # Скачиваем иконку к себе в public/icons и пишем локальный путь.
+            local = localize(hit["icon"])
+            if local:
+                result[name] = {"icon": local, "short": hit.get("short", "")}
+            else:
+                unmatched.append(name)
         else:
             unmatched.append(name)
 

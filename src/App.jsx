@@ -160,6 +160,20 @@ export default function App() {
             onReset={store.resetKappa}
           />
         )}
+
+        {/* Подвал с дисклеймером — виден на всех вкладках */}
+        <Box
+          component="footer"
+          sx={{ mt: 4, pt: 2, borderTop: 1, borderColor: 'divider', textAlign: 'center' }}
+        >
+          <Typography variant="caption" color="text.secondary" sx={{ display: 'block', lineHeight: 1.6 }}>
+            Неофициальный фан-проект. Не связан с Battlestate Games и не одобрен ими.
+            <br />
+            Escape from Tarkov, игровые ассеты и товарные знаки © Battlestate Games.
+            <br />
+            Некоммерческий проект. Данные и изображения предметов — через tarkov.dev.
+          </Typography>
+        </Box>
       </Container>
 
       {/* Кнопка «наверх» — на обеих вкладках, появляется при прокрутке */}
