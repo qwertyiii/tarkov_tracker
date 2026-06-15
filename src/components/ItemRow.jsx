@@ -12,10 +12,13 @@ import { FirBadge, OptionalBadge, QtyBadge } from './Badges'
 // окнах. Пропсы:
 //   name, fir, optional — описание предмета
 //   icon — URL картинки (или пусто), short — короткое имя (или пусто)
-//   lineQty — сколько нужно в этом контексте (в Своде совпадает с need)
-//   need    — сколько нужно по всему убежищу (максимум счётчика и порог «собрано»)
-//   found   — сколько уже найдено (общий счётчик collected[itemKey])
+//   lineQty — сколько нужно в этом контексте (для бейджа ×N)
+//   need    — максимум счётчика и порог «собрано полностью»
+//   found   — сколько уже найдено
+//   minCount — нижняя граница счётчика (занято построенными модулями/уровнями)
+//   locked  — строка read-only (потрачена на постройку уровня)
 //   onSetCount(n) — записать новое значение счётчика
+//   onBlocked() — попытка увести ниже minCount (для предупреждения)
 //   subtitle — подсказка («где используется» / уровень)
 export default function ItemRow({
   name,
@@ -26,7 +29,10 @@ export default function ItemRow({
   lineQty,
   need,
   found,
+  minCount = 0,
+  locked = false,
   onSetCount,
+  onBlocked,
   subtitle,
 }) {
   // need мог уменьшиться после постройки уровня — не показываем больше нужного
@@ -34,18 +40,33 @@ export default function ItemRow({
   const done = found >= need
 
   // Локальный текст поля ввода, чтобы можно было стирать/печатать; на blur и
-  // через −/+ клампим в 0..need.
+  // через −/+ клампим в minCount..need.
   const [text, setText] = useState(String(shown))
   useEffect(() => {
     setText(String(shown))
   }, [shown])
 
-  const clamp = (n) => Math.max(0, Math.min(need, Math.round(Number(n) || 0)))
+  // Клампим в [minCount, need]. Запрос ниже minCount → предупредить и не опускать.
+  const clamp = (n) => {
+    const r = Math.round(Number(n) || 0)
+    if (r < minCount) {
+      onBlocked?.()
+      return minCount
+    }
+    return Math.min(need, r)
+  }
 
   const commit = (raw) => {
+    if (locked) return
     const n = clamp(raw)
     onSetCount(n)
     setText(String(n))
+  }
+
+  // Поставить «собрано» = need, снять = minCount (нельзя ниже занятого).
+  const toggleDone = () => {
+    if (locked) return
+    onSetCount(done ? minCount : need)
   }
 
   // Состояние загрузки картинки: 'loading' | 'ok' | 'error'. Пока не 'ok' —
@@ -66,15 +87,15 @@ export default function ItemRow({
         px: 1,
         borderBottom: '1px solid',
         borderColor: 'divider',
-        opacity: done ? 0.45 : 1,
+        opacity: done || locked ? 0.45 : 1,
         transition: 'opacity 120ms',
         '&:hover': { backgroundColor: 'rgba(199,162,107,0.06)' },
       }}
     >
       {/* Картинка предмета (или заглушка). Клик = отметить/снять «собрано». */}
       <Box
-        onClick={() => onSetCount(done ? 0 : need)}
-        title="Отметить собранным"
+        onClick={locked ? undefined : toggleDone}
+        title={locked ? 'Потрачено на постройку' : 'Отметить собранным'}
         sx={{
           position: 'relative',
           width: 40,
@@ -88,7 +109,7 @@ export default function ItemRow({
           borderColor: 'divider',
           borderRadius: 0.5,
           overflow: 'hidden',
-          cursor: 'pointer',
+          cursor: locked ? 'default' : 'pointer',
         }}
       >
         {/* Заглушка видна, пока картинка не загрузилась (или её нет/ошибка);
@@ -129,7 +150,7 @@ export default function ItemRow({
           <Typography
             sx={{
               fontWeight: 500,
-              textDecoration: done ? 'line-through' : 'none',
+              textDecoration: done || locked ? 'line-through' : 'none',
             }}
           >
             {name}
@@ -160,7 +181,7 @@ export default function ItemRow({
         <IconButton
           size="small"
           aria-label="убавить"
-          disabled={shown <= 0}
+          disabled={locked || shown <= minCount}
           onClick={() => commit(shown - 1)}
           sx={{ borderRadius: 0 }}
         >
@@ -168,6 +189,7 @@ export default function ItemRow({
         </IconButton>
         <InputBase
           value={text}
+          disabled={locked}
           inputProps={{
             inputMode: 'numeric',
             'aria-label': `найдено ${name}`,
@@ -193,7 +215,7 @@ export default function ItemRow({
         <IconButton
           size="small"
           aria-label="добавить"
-          disabled={shown >= need}
+          disabled={locked || shown >= need}
           onClick={() => commit(shown + 1)}
           sx={{ borderRadius: 0 }}
         >
@@ -201,10 +223,11 @@ export default function ItemRow({
         </IconButton>
       </Box>
 
-      {/* Галочка = «собрано полностью» (справа): ставит found=need, снимает — 0 */}
+      {/* Галочка = «собрано полностью» (справа): ставит need, снимает — minCount */}
       <Checkbox
         checked={done}
-        onChange={(e) => onSetCount(e.target.checked ? need : 0)}
+        disabled={locked}
+        onChange={toggleDone}
         size="small"
         sx={{ p: 0.5, ml: 0.5 }}
       />

@@ -16,29 +16,30 @@ import ConstructionIcon from '@mui/icons-material/Construction'
 import ItemRow from './ItemRow'
 import Conditions from './Conditions'
 import {
+  distributeCount,
   iconFor,
   isLevelReady,
   itemKey,
   levelsByMode,
+  lineKey,
   pendingLevels,
   sortByCollected,
 } from '../lib/items'
 
-// Список предметов одного уровня (или объединённый). Сортировка: «не готово для
-// этого уровня» вверх, «готово» (found >= qty этой строки) вниз. need берётся
-// общий по убежищу из needMap, found — общий счётчик collected[key].
-function LevelItems({ items, collected, needMap, onSetCount, itemQuery }) {
+// Рисует готовые строки-дескрипторы: фильтрует по поиску, сортирует (готовые
+// вниз) и отдаёт в ItemRow. Дескриптор уже несёт need/found/minCount/locked и
+// колбэки — логику счёта формирует ModuleCard под конкретный режим.
+function ItemList({ rows, itemQuery }) {
   const sorted = useMemo(() => {
     const q = (itemQuery || '').trim().toLowerCase()
-    let rows = items.map((it) => ({ ...it, key: itemKey(it.name, it.fir) }))
+    let rs = rows
     if (q)
-      rows = rows.filter((r) => {
+      rs = rs.filter((r) => {
         const short = (iconFor(r.name).short || '').toLowerCase()
         return r.name.toLowerCase().includes(q) || short.includes(q)
       })
-    // «готово для уровня» = найдено не меньше, чем нужно в этой строке
-    return sortByCollected(rows, (r) => (collected[r.key] || 0) >= r.qty)
-  }, [items, collected, itemQuery])
+    return sortByCollected(rs, (r) => r.found >= r.need)
+  }, [rows, itemQuery])
 
   if (sorted.length === 0) {
     return (
@@ -49,27 +50,88 @@ function LevelItems({ items, collected, needMap, onSetCount, itemQuery }) {
   }
   return (
     <Box>
-      {sorted.map((it) => {
-        const meta = iconFor(it.name)
+      {sorted.map((r) => {
+        const meta = iconFor(r.name)
         return (
           <ItemRow
-            key={it.key + '@' + it.level}
-            name={it.name}
-            fir={it.fir}
-            optional={it.optional}
+            key={r.rowKey}
+            name={r.name}
+            fir={r.fir}
+            optional={r.optional}
             icon={meta.icon}
             short={meta.short}
-            lineQty={it.qty}
-            // через ||, чтобы 0 (уже построенные уровни в режиме 'all') падал
-            // в it.qty и не давал деления на ноль в счётчике
-            need={needMap.get(it.key) || it.qty}
-            found={collected[it.key] || 0}
-            onSetCount={(n) => onSetCount(it.key, n)}
+            lineQty={r.lineQty}
+            need={r.need}
+            found={r.found}
+            minCount={r.minCount}
+            locked={r.locked}
+            onSetCount={r.onSetCount}
+            onBlocked={r.onBlocked}
           />
         )
       })}
     </Box>
   )
+}
+
+// Строки для одного уровня (режим «по уровням»): счётчик = потребность строки,
+// построенные уровни заблокированы (read-only, полные).
+function rowsForLevel(module, level, builtLevel, collected, setCount) {
+  return level.items.map((it) => {
+    const lk = lineKey(module.id, level.level, it.name, it.fir)
+    return {
+      rowKey: lk,
+      name: it.name,
+      fir: it.fir,
+      optional: it.optional,
+      lineQty: it.qty,
+      need: it.qty,
+      found: collected[lk] || 0,
+      minCount: 0,
+      locked: level.level <= builtLevel,
+      onSetCount: (n) => setCount(lk, n),
+    }
+  })
+}
+
+// Строки для «всё сразу»: агрегируем предметы показываемых уровней по itemKey в
+// один ряд. Знаменатель = сумма по показанным уровням, нижний порог = сумма
+// построенных строк, запись распределяется по строкам через distributeCount.
+function rowsMerged(module, levels, builtLevel, collected, setCounts, onNotify) {
+  const map = new Map()
+  for (const level of levels) {
+    for (const it of level.items) {
+      const key = itemKey(it.name, it.fir)
+      const lk = lineKey(module.id, level.level, it.name, it.fir)
+      const built = level.level <= builtLevel
+      let g = map.get(key)
+      if (!g) {
+        g = {
+          rowKey: key,
+          name: it.name,
+          fir: it.fir,
+          optional: true,
+          need: 0,
+          found: 0,
+          minCount: 0,
+          lines: [],
+        }
+        map.set(key, g)
+      }
+      g.need += it.qty
+      g.found += collected[lk] || 0
+      if (built) g.minCount += it.qty
+      if (!it.optional) g.optional = false
+      g.lines.push({ lineKey: lk, qty: it.qty, built })
+    }
+  }
+  return Array.from(map.values()).map((g) => ({
+    ...g,
+    lineQty: g.need,
+    locked: false,
+    onSetCount: (n) => setCounts(distributeCount(g.lines, n)),
+    onBlocked: () => onNotify(`«${g.name}»: часть занята построенными уровнями`),
+  }))
 }
 
 export default function ModuleCard({
@@ -78,9 +140,10 @@ export default function ModuleCard({
   groupByLevel,
   levelMode,
   collected,
-  needMap,
   onSetLevel,
-  onSetCount,
+  setCount,
+  setCounts,
+  onNotify,
   expanded,
   onExpandedChange,
   itemQuery,
@@ -94,19 +157,26 @@ export default function ModuleCard({
 
   // Целевой уровень = следующий к постройке. Его готовность включает кнопку.
   const targetLevel = module.levels.find((l) => l.level === builtLevel + 1)
-  const ready = targetLevel ? isLevelReady(targetLevel, collected) : false
+  const ready = targetLevel ? isLevelReady(module.id, targetLevel, collected) : false
 
-  // Сколько обязательных предметов ещё не добрано (found < qty) — для шапки.
+  // Сколько обязательных строк ещё не добрано (found < qty) — для шапки.
   const remaining = useMemo(() => {
     let n = 0
     for (const l of pending)
       for (const it of l.items)
-        if (!it.optional && (collected[itemKey(it.name, it.fir)] || 0) < it.qty) n++
+        if (
+          !it.optional &&
+          (collected[lineKey(module.id, l.level, it.name, it.fir)] || 0) < it.qty
+        )
+          n++
     return n
-  }, [pending, collected])
+  }, [pending, collected, module.id])
 
-  // «Всё сразу» — объединяем предметы и условия показываемых уровней.
-  const mergedItems = useMemo(() => shownLevels.flatMap((l) => l.items), [shownLevels])
+  // «Всё сразу» — один ряд на предмет из показываемых уровней.
+  const mergedRows = useMemo(
+    () => rowsMerged(module, shownLevels, builtLevel, collected, setCounts, onNotify),
+    [module, shownLevels, builtLevel, collected, setCounts, onNotify]
+  )
   const mergedConditions = useMemo(
     () => shownLevels.flatMap((l) => l.conditions),
     [shownLevels]
@@ -151,7 +221,7 @@ export default function ModuleCard({
             <Select
               label="Построенный уровень"
               value={builtLevel}
-              onChange={(e) => onSetLevel(module.id, Number(e.target.value))}
+              onChange={(e) => onSetLevel(module.id, Number(e.target.value), module)}
             >
               {Array.from({ length: module.maxLevel + 1 }, (_, i) => i).map((lvl) => (
                 <MenuItem key={lvl} value={lvl}>
@@ -167,7 +237,7 @@ export default function ModuleCard({
               variant="contained"
               startIcon={<ConstructionIcon />}
               disabled={!ready}
-              onClick={() => onSetLevel(module.id, builtLevel + 1)}
+              onClick={() => onSetLevel(module.id, builtLevel + 1, module)}
             >
               Построить уровень {builtLevel + 1}
             </Button>
@@ -184,7 +254,7 @@ export default function ModuleCard({
             {atMax ? 'Всё построено — собирать нечего.' : 'Показывать нечего.'}
           </Typography>
         ) : groupByLevel ? (
-          // «По уровням»
+          // «По уровням» — счётчик по строке уровня
           shownLevels.map((level) => (
             <Box key={level.level} sx={{ mb: 2 }}>
               <Typography
@@ -198,27 +268,23 @@ export default function ModuleCard({
                 }}
               >
                 Уровень {level.level}
+                {level.level <= builtLevel && (
+                  <Box component="span" sx={{ color: 'text.secondary', ml: 1, fontSize: 12 }}>
+                    (построен)
+                  </Box>
+                )}
               </Typography>
-              <LevelItems
-                items={level.items}
-                collected={collected}
-                needMap={needMap}
-                onSetCount={onSetCount}
+              <ItemList
+                rows={rowsForLevel(module, level, builtLevel, collected, setCount)}
                 itemQuery={itemQuery}
               />
               {!itemQuery && <Conditions conditions={level.conditions} />}
             </Box>
           ))
         ) : (
-          // «Всё сразу»
+          // «Всё сразу» — один ряд на предмет, знаменатель = сумма по модулю
           <Box>
-            <LevelItems
-              items={mergedItems}
-              collected={collected}
-              needMap={needMap}
-              onSetCount={onSetCount}
-              itemQuery={itemQuery}
-            />
+            <ItemList rows={mergedRows} itemQuery={itemQuery} />
             {!itemQuery && <Conditions conditions={mergedConditions} />}
           </Box>
         )}

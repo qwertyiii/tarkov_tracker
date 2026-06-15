@@ -13,7 +13,7 @@ import AddIcon from '@mui/icons-material/Add'
 import RemoveIcon from '@mui/icons-material/Remove'
 
 import ItemRow from './ItemRow'
-import { buildSummary, iconFor, sortByCollected } from '../lib/items'
+import { buildSummary, distributeCount, iconFor, sortByCollected } from '../lib/items'
 
 // Панель справа: все модули со степперами −/+ уровня. Построил уровень →
 // его предметы сами уходят из списка слева (buildSummary считается от builtLevels).
@@ -62,7 +62,7 @@ function ModulesPanel({ modules, builtLevels, showEvent, setBuiltLevel }) {
               size="small"
               aria-label={`Понизить уровень ${m.name}`}
               disabled={built <= 0}
-              onClick={() => setBuiltLevel(m.id, Math.max(0, built - 1))}
+              onClick={() => setBuiltLevel(m.id, Math.max(0, built - 1), m)}
             >
               <RemoveIcon fontSize="inherit" />
             </IconButton>
@@ -70,7 +70,7 @@ function ModulesPanel({ modules, builtLevels, showEvent, setBuiltLevel }) {
               size="small"
               aria-label={`Повысить уровень ${m.name}`}
               disabled={atMax}
-              onClick={() => setBuiltLevel(m.id, Math.min(m.maxLevel, built + 1))}
+              onClick={() => setBuiltLevel(m.id, Math.min(m.maxLevel, built + 1), m)}
             >
               <AddIcon fontSize="inherit" />
             </IconButton>
@@ -88,21 +88,23 @@ export default function SummaryView({
   modules,
   builtLevels,
   collected,
-  setCount,
+  setCounts,
   setBuiltLevel,
+  onNotify,
   showEvent,
 }) {
   const [query, setQuery] = useState('')
   const [hideCollected, setHideCollected] = useState(false)
   const [cols2, setCols2] = useState(false)
 
+  // Свод теперь по всем уровням и зависит от collected (found/builtQty/lines).
   const groups = useMemo(
-    () => buildSummary(modules, builtLevels, showEvent),
-    [modules, builtLevels, showEvent]
+    () => buildSummary(modules, builtLevels, collected, showEvent),
+    [modules, builtLevels, collected, showEvent]
   )
 
-  // «Собрано полностью» = found >= need (need = totalQty группы).
-  const isDone = (g) => (collected[g.key] || 0) >= g.totalQty
+  // «Собрано полностью» = найдено по всем модулям не меньше, чем нужно всего.
+  const isDone = (g) => g.found >= g.totalQty
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
@@ -114,8 +116,7 @@ export default function SummaryView({
       })
     if (hideCollected) rows = rows.filter((g) => !isDone(g))
     return sortByCollected(rows, isDone)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [groups, query, hideCollected, collected])
+  }, [groups, query, hideCollected])
 
   const total = groups.length
   const done = groups.filter(isDone).length
@@ -123,19 +124,25 @@ export default function SummaryView({
   const renderRow = (g) => {
     const meta = iconFor(g.name)
     return (
-    <ItemRow
-      key={g.key}
-      name={g.name}
-      fir={g.fir}
-      optional={g.optional}
-      icon={meta.icon}
-      short={meta.short}
-      lineQty={g.totalQty}
-      need={g.totalQty}
-      found={collected[g.key] || 0}
-      onSetCount={(n) => setCount(g.key, n)}
-      subtitle={'Нужен в: ' + g.usedIn.map((u) => `${u.module} ${u.level}`).join(', ')}
-    />
+      <ItemRow
+        key={g.key}
+        name={g.name}
+        fir={g.fir}
+        optional={g.optional}
+        icon={meta.icon}
+        short={meta.short}
+        lineQty={g.totalQty}
+        need={g.totalQty}
+        found={g.found}
+        minCount={g.builtQty}
+        onSetCount={(n) => setCounts(distributeCount(g.lines, n))}
+        onBlocked={() =>
+          onNotify(
+            `«${g.name}»: ${g.builtQty} шт. заняты построенными модулями — сначала понизьте их уровень`
+          )
+        }
+        subtitle={'Нужен в: ' + g.usedIn.map((u) => `${u.module} ${u.level}`).join(', ')}
+      />
     )
   }
 

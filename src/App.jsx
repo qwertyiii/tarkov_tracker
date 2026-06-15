@@ -132,6 +132,8 @@ export default function App() {
             collected={store.collected}
             setBuiltLevel={store.setBuiltLevel}
             setCount={store.setCount}
+            setCounts={store.setCounts}
+            onNotify={setToast}
             showEvent={showEvent}
             onShowEventChange={setShowEvent}
           />
@@ -140,8 +142,9 @@ export default function App() {
             modules={data.modules}
             builtLevels={store.builtLevels}
             collected={store.collected}
-            setCount={store.setCount}
+            setCounts={store.setCounts}
             setBuiltLevel={store.setBuiltLevel}
+            onNotify={setToast}
             showEvent={showEvent}
           />
         )}

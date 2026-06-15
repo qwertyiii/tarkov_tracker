@@ -10,7 +10,7 @@ import ToggleButton from '@mui/material/ToggleButton'
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup'
 
 import ModuleCard from './ModuleCard'
-import { iconFor, needByKey, pendingLevels } from '../lib/items'
+import { iconFor, pendingLevels } from '../lib/items'
 
 // Окно 1 — список всех модулей. Переключатели: «по уровням / всё сразу»,
 // «ивентовые модули», «2 колонки». Поиск ищет и по названию модуля, и по
@@ -21,6 +21,8 @@ export default function ModulesView({
   collected,
   setBuiltLevel,
   setCount,
+  setCounts,
+  onNotify,
   showEvent,
   onShowEventChange,
 }) {
@@ -33,12 +35,6 @@ export default function ModulesView({
   const [expandedSet, setExpandedSet] = useState(() => new Set())
 
   const q = query.trim().toLowerCase()
-
-  // Нужное количество по всему убежищу для каждого предмета — считаем один раз.
-  const needMap = useMemo(
-    () => needByKey(modules, builtLevels, showEvent),
-    [modules, builtLevels, showEvent]
-  )
 
   // Для каждого модуля: видим ли он, совпал ли по имени, совпал ли по предмету.
   const visible = useMemo(() => {
@@ -158,9 +154,10 @@ export default function ModulesView({
                 groupByLevel={groupByLevel}
                 levelMode={levelMode}
                 collected={collected}
-                needMap={needMap}
                 onSetLevel={setBuiltLevel}
-                onSetCount={setCount}
+                setCount={setCount}
+                setCounts={setCounts}
+                onNotify={onNotify}
                 // При поиске совпавшие модули авто-раскрываем; иначе ручное состояние.
                 expanded={q ? true : expandedSet.has(m.id)}
                 onExpandedChange={toggleExpanded}
